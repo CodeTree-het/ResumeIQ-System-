@@ -1,7 +1,4 @@
-import spacy
-
 from fastapi import FastAPI
-
 from fastapi.middleware.cors import CORSMiddleware
 
 from backend.database.mongodb import check_mongodb_connection
