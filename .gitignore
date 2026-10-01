@@ -1,0 +1,32 @@
+# Virtual environment
+venv/
+
+# Environment variables
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Uploaded/local storage files
+storage/resumes/*
+storage/job_descriptions/*
+
+# Keep folders
+!storage/resumes/.gitkeep
+!storage/job_descriptions/.gitkeep
+
+# Trained model files
+trained_models/*.joblib
+
+# Logs
+*.log

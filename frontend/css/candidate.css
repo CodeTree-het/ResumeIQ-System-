@@ -1,0 +1,2790 @@
+/* =========================================================
+   ResumeIQ Candidate Dashboard
+========================================================= */
+
+:root {
+
+    --navy:
+        #0b1739;
+
+    --blue:
+        #0b6cf2;
+
+    --green:
+        #0aac7f;
+
+    --purple:
+        #7047eb;
+
+    --page-bg:
+        #f8fafd;
+
+    --border:
+        #dfe7f0;
+
+    --text:
+        #172541;
+
+    --muted:
+        #7184a3;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    box-sizing:
+        border-box;
+}
+
+
+html,
+body {
+
+    margin:
+        0;
+
+    min-height:
+        100%;
+}
+
+
+body {
+
+    overflow-x:
+        hidden;
+}
+
+
+.candidate-dashboard-page {
+
+    min-height:
+        100vh;
+
+    background:
+        var(--page-bg);
+
+    color:
+        var(--text);
+
+    font-family:
+        "Inter",
+        "Segoe UI",
+        Arial,
+        sans-serif;
+}
+
+
+/* =========================================================
+   LAYOUT
+========================================================= */
+
+.candidate-layout {
+
+    min-height:
+        100vh;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        260px
+        minmax(0, 1fr);
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.candidate-sidebar {
+
+    position:
+        fixed;
+
+    top:
+        0;
+
+    bottom:
+        0;
+
+    left:
+        0;
+
+    width:
+        260px;
+
+    z-index:
+        50;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        space-between;
+
+    padding:
+        31px
+        17px
+        23px;
+
+    overflow-y:
+        auto;
+
+    background:
+        #ffffff;
+
+    border-right:
+        1px solid #e2e9f1;
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.candidate-brand {
+
+    padding:
+        0
+        11px
+        28px;
+}
+
+
+.resumeiq-wordmark {
+
+    display:
+        inline-flex;
+
+    align-items:
+        baseline;
+
+    font-size:
+        30px;
+
+    line-height:
+        1;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        -1.7px;
+}
+
+
+.resume-word {
+
+    color:
+        #0b1739;
+}
+
+
+.iq-word {
+
+    color:
+        #1468f3;
+}
+
+
+.candidate-brand p {
+
+    margin:
+        8px
+        0
+        0;
+
+    color:
+        #7185a7;
+
+    font-size:
+        10px;
+}
+
+
+/* =========================================================
+   MENU
+========================================================= */
+
+.candidate-menu {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        4px;
+}
+
+
+.candidate-menu-link {
+
+    min-height:
+        45px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        14px;
+
+    padding:
+        0
+        16px;
+
+    border-radius:
+        10px;
+
+    color:
+        #1b335a;
+
+    font-size:
+        12px;
+
+    font-weight:
+        500;
+
+    text-decoration:
+        none;
+
+    transition:
+        background
+        0.18s ease,
+        color
+        0.18s ease;
+}
+
+
+.candidate-menu-link i {
+
+    width:
+        22px;
+
+    color:
+        #264b82;
+
+    font-size:
+        18px;
+
+    text-align:
+        center;
+}
+
+
+.candidate-menu-link:hover {
+
+    color:
+        var(--blue);
+
+    background:
+        #f3f7fd;
+}
+
+
+.candidate-menu-link:hover i {
+
+    color:
+        var(--blue);
+}
+
+
+.candidate-menu-link.active {
+
+    color:
+        #075fe6;
+
+    background:
+        linear-gradient(
+            90deg,
+            #deedff,
+            #d8e9ff
+        );
+
+    font-weight:
+        600;
+}
+
+
+.candidate-menu-link.active i {
+
+    color:
+        #075fe6;
+}
+
+
+/* =========================================================
+   SIDEBAR BOTTOM
+========================================================= */
+
+.candidate-sidebar-bottom {
+
+    margin-top:
+        30px;
+}
+
+
+.candidate-career-box {
+
+    min-height:
+        148px;
+
+    display:
+        flex;
+
+    align-items:
+        flex-start;
+
+    gap:
+        13px;
+
+    padding:
+        22px
+        14px;
+
+    overflow:
+        hidden;
+
+    border:
+        1px solid #dbeaf8;
+
+    border-radius:
+        11px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #eaf6ff,
+            #f1f9ff
+        );
+}
+
+
+.career-icon {
+
+    width:
+        36px;
+
+    height:
+        36px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    flex-shrink:
+        0;
+
+    color:
+        #0d79d6;
+
+    font-size:
+        26px;
+}
+
+
+.candidate-career-box strong {
+
+    display:
+        block;
+
+    margin-bottom:
+        8px;
+
+    color:
+        #20344f;
+
+    font-size:
+        10px;
+
+    line-height:
+        1.45;
+}
+
+
+.candidate-career-box p {
+
+    margin:
+        0;
+
+    color:
+        #7185a3;
+
+    font-size:
+        8px;
+
+    line-height:
+        1.6;
+}
+
+
+.candidate-sidebar-footer {
+
+    padding:
+        22px
+        10px
+        0;
+
+    color:
+        #7185a3;
+}
+
+
+.candidate-sidebar-footer p {
+
+    margin:
+        0
+        0
+        7px;
+
+    font-size:
+        8.5px;
+}
+
+
+.candidate-sidebar-footer span {
+
+    font-size:
+        8.5px;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.candidate-main {
+
+    grid-column:
+        2;
+
+    min-width:
+        0;
+
+    padding-bottom:
+        30px;
+}
+
+
+/* =========================================================
+   TOPBAR
+========================================================= */
+
+.candidate-topbar {
+
+    height:
+        67px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        28px;
+
+    padding:
+        0
+        28px;
+
+    background:
+        #ffffff;
+
+    border-bottom:
+        1px solid #e5ebf2;
+
+    position:
+        relative;
+
+    z-index:
+        100;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.candidate-search {
+
+    position:
+        relative;
+
+    width:
+        min(
+            895px,
+            69%
+        );
+
+    height:
+        44px;
+}
+
+
+.candidate-search i {
+
+    position:
+        absolute;
+
+    top:
+        50%;
+
+    left:
+        15px;
+
+    transform:
+        translateY(-50%);
+
+    color:
+        #385b8c;
+
+    font-size:
+        17px;
+}
+
+
+.candidate-search input {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    padding:
+        0
+        17px
+        0
+        48px;
+
+    border:
+        1px solid #dbe5ef;
+
+    border-radius:
+        10px;
+
+    outline:
+        none;
+
+    background:
+        #ffffff;
+
+    color:
+        #2d4467;
+
+    font-size:
+        10px;
+}
+
+
+.candidate-search input::placeholder {
+
+    color:
+        #7288a9;
+}
+
+
+/* =========================================================
+   TOP RIGHT
+========================================================= */
+
+.candidate-topbar-right {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        8px;
+}
+
+
+/* =========================================================
+   NOTIFICATION
+========================================================= */
+
+.candidate-notification {
+
+    position:
+        relative;
+
+    width:
+        40px;
+
+    height:
+        40px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border:
+        0;
+
+    border-radius:
+        50%;
+
+    background:
+        transparent;
+
+    color:
+        #31517f;
+
+    font-size:
+        18px;
+
+    cursor:
+        pointer;
+}
+
+
+.candidate-notification:hover {
+
+    background:
+        #f4f8fd;
+}
+
+
+.candidate-notification span {
+
+    position:
+        absolute;
+
+    top:
+        8px;
+
+    right:
+        8px;
+
+    width:
+        8px;
+
+    height:
+        8px;
+
+    border:
+        2px solid #ffffff;
+
+    border-radius:
+        50%;
+
+    background:
+        #ed3c3c;
+}
+
+
+/* =========================================================
+   PROFILE
+========================================================= */
+
+.candidate-profile-wrapper {
+
+    position:
+        relative;
+}
+
+
+.candidate-profile {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+}
+
+
+.candidate-profile-trigger {
+
+    min-width:
+        172px;
+
+    padding:
+        4px
+        7px;
+
+    border:
+        0;
+
+    border-radius:
+        9px;
+
+    background:
+        transparent;
+
+    text-align:
+        left;
+
+    cursor:
+        pointer;
+}
+
+
+.candidate-profile-trigger:hover {
+
+    background:
+        #f4f8fd;
+}
+
+
+.candidate-avatar {
+
+    width:
+        43px;
+
+    height:
+        43px;
+
+    flex-shrink:
+        0;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        50%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #1163d9,
+            #044bb5
+        );
+
+    color:
+        #ffffff;
+
+    font-size:
+        11px;
+
+    font-weight:
+        700;
+}
+
+
+.candidate-profile-info {
+
+    flex:
+        1;
+
+    min-width:
+        0;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+}
+
+
+.candidate-profile-info strong {
+
+    max-width:
+        105px;
+
+    overflow:
+        hidden;
+
+    text-overflow:
+        ellipsis;
+
+    white-space:
+        nowrap;
+
+    color:
+        #172541;
+
+    font-size:
+        10.5px;
+}
+
+
+.candidate-profile-info span {
+
+    margin-top:
+        2px;
+
+    color:
+        #7184a3;
+
+    font-size:
+        8px;
+}
+
+
+.candidate-profile-chevron {
+
+    color:
+        #566f95;
+
+    font-size:
+        10px;
+
+    transition:
+        transform
+        0.2s ease;
+}
+
+
+.candidate-profile-chevron.open {
+
+    transform:
+        rotate(180deg);
+}
+
+
+/* =========================================================
+   PROFILE DROPDOWN
+========================================================= */
+
+.candidate-profile-dropdown {
+
+    position:
+        absolute;
+
+    top:
+        calc(100% + 10px);
+
+    right:
+        0;
+
+    width:
+        255px;
+
+    padding:
+        10px;
+
+    display:
+        none;
+
+    border:
+        1px solid #e1e8f1;
+
+    border-radius:
+        13px;
+
+    background:
+        #ffffff;
+
+    box-shadow:
+        0
+        16px
+        45px
+        rgba(
+            29,
+            52,
+            84,
+            0.15
+        );
+
+    z-index:
+        9999;
+}
+
+
+.candidate-profile-dropdown.show {
+
+    display:
+        block;
+}
+
+
+.candidate-dropdown-user {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        11px;
+
+    padding:
+        8px
+        8px
+        12px;
+}
+
+
+.candidate-dropdown-avatar {
+
+    width:
+        40px;
+
+    height:
+        40px;
+
+    flex-shrink:
+        0;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        50%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #176fed,
+            #5798f1
+        );
+
+    color:
+        #ffffff;
+
+    font-size:
+        11px;
+
+    font-weight:
+        700;
+}
+
+
+.candidate-dropdown-user-info {
+
+    min-width:
+        0;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+}
+
+
+.candidate-dropdown-user-info strong {
+
+    max-width:
+        165px;
+
+    overflow:
+        hidden;
+
+    text-overflow:
+        ellipsis;
+
+    white-space:
+        nowrap;
+
+    color:
+        #20304a;
+
+    font-size:
+        11px;
+}
+
+
+.candidate-dropdown-user-info span {
+
+    max-width:
+        165px;
+
+    margin-top:
+        3px;
+
+    overflow:
+        hidden;
+
+    text-overflow:
+        ellipsis;
+
+    white-space:
+        nowrap;
+
+    color:
+        #8e9bad;
+
+    font-size:
+        8px;
+}
+
+
+.candidate-dropdown-divider {
+
+    height:
+        1px;
+
+    margin:
+        2px
+        2px
+        7px;
+
+    background:
+        #edf1f5;
+}
+
+
+.candidate-dropdown-item {
+
+    width:
+        100%;
+
+    min-height:
+        55px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+
+    padding:
+        8px
+        9px;
+
+    border:
+        0;
+
+    border-radius:
+        9px;
+
+    background:
+        transparent;
+
+    color:
+        #263956;
+
+    text-align:
+        left;
+
+    text-decoration:
+        none;
+
+    cursor:
+        pointer;
+
+    transition:
+        background
+        0.18s ease;
+}
+
+
+.candidate-dropdown-item:hover {
+
+    background:
+        #f5f8fc;
+
+    color:
+        #263956;
+}
+
+
+.candidate-dropdown-icon {
+
+    width:
+        34px;
+
+    height:
+        34px;
+
+    flex-shrink:
+        0;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        9px;
+
+    font-size:
+        14px;
+}
+
+
+/* PROFILE NEW */
+
+.candidate-dropdown-icon.profile {
+
+    background:
+        #eef5ff;
+
+    color:
+        #176ff2;
+}
+
+
+/* SETTINGS */
+
+.candidate-dropdown-icon.settings {
+
+    background:
+        #eef5ff;
+
+    color:
+        #176ff2;
+}
+
+
+/* LOGOUT */
+
+.candidate-dropdown-icon.logout {
+
+    background:
+        #fff0f1;
+
+    color:
+        #e0525c;
+}
+
+
+.candidate-dropdown-item-copy {
+
+    flex:
+        1;
+
+    min-width:
+        0;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+}
+
+
+.candidate-dropdown-item-copy strong {
+
+    color:
+        #263956;
+
+    font-size:
+        9.5px;
+}
+
+
+.candidate-dropdown-item-copy small {
+
+    margin-top:
+        2px;
+
+    color:
+        #94a1b3;
+
+    font-size:
+        7.5px;
+}
+
+
+.candidate-dropdown-arrow {
+
+    color:
+        #99a6b8;
+
+    font-size:
+        9px;
+}
+
+
+.candidate-logout-item:hover {
+
+    background:
+        #fff6f7;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.candidate-content {
+
+    padding:
+        25px
+        27px
+        0;
+}
+
+
+/* =========================================================
+   PAGE HEADING
+========================================================= */
+
+.candidate-page-heading {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        30px;
+
+    margin:
+        0
+        7px
+        17px;
+}
+
+
+.candidate-page-heading
+> div:first-child
+> p {
+
+    margin:
+        0
+        0
+        4px;
+
+    color:
+        #4e6993;
+
+    font-size:
+        10px;
+}
+
+
+.candidate-page-heading h1 {
+
+    margin:
+        0
+        0
+        3px;
+
+    color:
+        #0b1739;
+
+    font-size:
+        31px;
+
+    line-height:
+        1.12;
+
+    font-weight:
+        780;
+
+    letter-spacing:
+        -0.8px;
+}
+
+
+.candidate-page-heading
+> div:first-child
+> span {
+
+    color:
+        #7184a3;
+
+    font-size:
+        10.5px;
+}
+
+
+.candidate-quote {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        9px;
+}
+
+
+.candidate-quote > span {
+
+    width:
+        2px;
+
+    height:
+        39px;
+
+    border-radius:
+        10px;
+
+    background:
+        #1bc7a9;
+}
+
+
+.candidate-quote p {
+
+    margin:
+        0;
+
+    color:
+        #637b9f;
+
+    font-size:
+        9px;
+
+    line-height:
+        1.55;
+
+    font-style:
+        italic;
+}
+
+
+/* =========================================================
+   STAT GRID
+========================================================= */
+
+.candidate-stat-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(
+            4,
+            minmax(0, 1fr)
+        );
+
+    gap:
+        16px;
+
+    margin-bottom:
+        16px;
+}
+
+
+.candidate-stat-card {
+
+    min-height:
+        132px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        18px;
+
+    padding:
+        20px
+        17px;
+
+    border:
+        1px solid #dfe7f0;
+
+    border-radius:
+        11px;
+
+    background:
+        #ffffff;
+
+    box-shadow:
+        0
+        6px
+        20px
+        rgba(
+            31,
+            59,
+            95,
+            0.035
+        );
+}
+
+
+.candidate-stat-icon {
+
+    width:
+        64px;
+
+    height:
+        64px;
+
+    flex-shrink:
+        0;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        13px;
+
+    font-size:
+        31px;
+}
+
+
+.candidate-stat-icon.blue {
+
+    color:
+        #0971ec;
+
+    background:
+        #e4f2ff;
+}
+
+
+.candidate-stat-icon.green {
+
+    color:
+        #0db38b;
+
+    background:
+        #e3f8f1;
+}
+
+
+.candidate-stat-icon.purple {
+
+    color:
+        #7047eb;
+
+    background:
+        #eee9ff;
+}
+
+
+.candidate-stat-content {
+
+    flex:
+        1;
+
+    min-width:
+        0;
+}
+
+
+.candidate-stat-title {
+
+    color:
+        #101936;
+
+    font-size:
+        10.5px;
+}
+
+
+.candidate-stat-number-row {
+
+    min-height:
+        35px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        8px;
+
+    margin-top:
+        4px;
+}
+
+
+.candidate-stat-number-row h2 {
+
+    margin:
+        0;
+
+    color:
+        #0d1838;
+
+    font-size:
+        27px;
+
+    font-weight:
+        780;
+
+    line-height:
+        1;
+}
+
+
+.candidate-stat-number-row
+h2 small {
+
+    color:
+        #596d90;
+
+    font-size:
+        11px;
+
+    font-weight:
+        500;
+}
+
+
+.candidate-stat-card p {
+
+    margin:
+        3px
+        0
+        0;
+
+    color:
+        #657b9d;
+
+    font-size:
+        8.5px;
+}
+
+
+.candidate-active-resume-name {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        8px;
+}
+
+
+.candidate-green-dot {
+
+    width:
+        8px;
+
+    height:
+        8px;
+
+    flex-shrink:
+        0;
+
+    border-radius:
+        50%;
+
+    background:
+        #0cad80;
+}
+
+
+.candidate-trend {
+
+    color:
+        #0ba878;
+
+    font-size:
+        8.5px;
+
+    font-weight:
+        700;
+}
+
+
+/* =========================================================
+   COMMON CARD
+========================================================= */
+
+.candidate-card {
+
+    min-width:
+        0;
+
+    overflow:
+        hidden;
+
+    border:
+        1px solid #dfe7f0;
+
+    border-radius:
+        11px;
+
+    background:
+        #ffffff;
+
+    box-shadow:
+        0
+        6px
+        20px
+        rgba(
+            31,
+            59,
+            95,
+            0.035
+        );
+}
+
+
+.candidate-card-header {
+
+    min-height:
+        49px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        14px;
+
+    padding:
+        0
+        15px;
+}
+
+
+.candidate-card-header > div {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        9px;
+}
+
+
+.candidate-card-header
+> div i {
+
+    color:
+        #244e83;
+
+    font-size:
+        16px;
+}
+
+
+.candidate-card-header strong {
+
+    color:
+        #111b3a;
+
+    font-size:
+        11px;
+}
+
+
+.candidate-card-header a {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        5px;
+
+    color:
+        #0868ee;
+
+    font-size:
+        8.5px;
+
+    font-weight:
+        600;
+
+    text-decoration:
+        none;
+}
+
+
+/* =========================================================
+   MIDDLE GRID
+========================================================= */
+
+.candidate-middle-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1.12fr
+        0.96fr
+        1.04fr;
+
+    gap:
+        16px;
+
+    margin-bottom:
+        16px;
+}
+
+
+.candidate-middle-grid
+.candidate-card {
+
+    min-height:
+        236px;
+}
+
+
+/* =========================================================
+   RECENT RESUME
+========================================================= */
+
+.candidate-recent-wrapper {
+
+    padding:
+        0
+        13px
+        13px;
+}
+
+
+.candidate-recent-resume {
+
+    min-height:
+        126px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        15px;
+
+    padding:
+        18px
+        15px;
+
+    border:
+        1px solid #dfe7f0;
+
+    border-radius:
+        9px;
+}
+
+
+.candidate-file-icon {
+
+    width:
+        50px;
+
+    height:
+        61px;
+
+    flex-shrink:
+        0;
+
+    display:
+        flex;
+
+    align-items:
+        flex-end;
+
+    justify-content:
+        center;
+
+    padding-bottom:
+        6px;
+
+    border:
+        1px solid #ffd8d8;
+
+    border-radius:
+        7px;
+
+    background:
+        #fff0f0;
+}
+
+
+.candidate-file-icon span {
+
+    width:
+        100%;
+
+    padding:
+        3px
+        0;
+
+    background:
+        #e42b2b;
+
+    color:
+        #ffffff;
+
+    font-size:
+        8px;
+
+    font-weight:
+        700;
+
+    text-align:
+        center;
+}
+
+
+.candidate-file-icon.docx {
+
+    background:
+        #edf5ff;
+
+    border-color:
+        #cfe2ff;
+}
+
+
+.candidate-file-icon.docx span {
+
+    background:
+        #176bd6;
+}
+
+
+.candidate-resume-info {
+
+    flex:
+        1;
+
+    min-width:
+        0;
+}
+
+
+.candidate-resume-info strong {
+
+    display:
+        block;
+
+    max-width:
+        250px;
+
+    overflow:
+        hidden;
+
+    text-overflow:
+        ellipsis;
+
+    white-space:
+        nowrap;
+
+    color:
+        #172541;
+
+    font-size:
+        10.5px;
+}
+
+
+.candidate-resume-info p {
+
+    margin:
+        6px
+        0
+        9px;
+
+    color:
+        #7184a3;
+
+    font-size:
+        8.5px;
+}
+
+
+.candidate-active-badge {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        4px;
+
+    padding:
+        5px
+        8px;
+
+    border-radius:
+        14px;
+
+    background:
+        #e7f9f3;
+
+    color:
+        #079d79;
+
+    font-size:
+        8px;
+
+    font-weight:
+        600;
+}
+
+
+.candidate-more-button {
+
+    align-self:
+        flex-start;
+
+    width:
+        28px;
+
+    height:
+        28px;
+
+    border:
+        0;
+
+    background:
+        transparent;
+
+    color:
+        #1d365b;
+}
+
+
+/* =========================================================
+   OVERVIEW
+========================================================= */
+
+.candidate-overview-list {
+
+    padding:
+        0
+        13px
+        11px;
+}
+
+
+.candidate-overview-row {
+
+    min-height:
+        35px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        10px;
+
+    border-bottom:
+        1px solid #edf1f5;
+}
+
+
+.candidate-overview-row:last-child {
+
+    border-bottom:
+        0;
+}
+
+
+.candidate-overview-row
+> div {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        9px;
+
+    color:
+        #1c3153;
+
+    font-size:
+        9px;
+}
+
+
+.candidate-overview-icon {
+
+    width:
+        26px;
+
+    height:
+        26px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        50%;
+
+    font-size:
+        12px;
+}
+
+
+.candidate-overview-icon.blue {
+
+    color:
+        #176ff2;
+
+    background:
+        #e9f3ff;
+}
+
+
+.candidate-overview-icon.purple {
+
+    color:
+        #7047eb;
+
+    background:
+        #f1edff;
+}
+
+
+.candidate-overview-icon.teal {
+
+    color:
+        #0a8f86;
+
+    background:
+        #e8f7f5;
+}
+
+
+.candidate-overview-icon.red {
+
+    color:
+        #c44840;
+
+    background:
+        #fff0ed;
+}
+
+
+.candidate-overview-row strong {
+
+    color:
+        #172541;
+
+    font-size:
+        9px;
+}
+
+
+.candidate-overview-row
+> div:last-child i {
+
+    color:
+        #7084a3;
+
+    font-size:
+        9px;
+}
+
+
+/* =========================================================
+   SKILLS
+========================================================= */
+
+.candidate-skill-list {
+
+    min-height:
+        174px;
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    align-content:
+        flex-start;
+
+    gap:
+        9px
+        8px;
+
+    padding:
+        7px
+        14px
+        14px;
+}
+
+
+.candidate-skill-list span {
+
+    min-height:
+        31px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    padding:
+        0
+        18px;
+
+    border-radius:
+        18px;
+
+    background:
+        #e8f4ff;
+
+    color:
+        #075fda;
+
+    font-size:
+        8.5px;
+}
+
+
+.candidate-skill-list
+.candidate-skill-more {
+
+    background:
+        #eef3f8;
+
+    color:
+        #536a8b;
+}
+
+
+.candidate-skill-list
+.candidate-skill-empty {
+
+    background:
+        #f3f6fa;
+
+    color:
+        #8090a7;
+}
+
+
+/* =========================================================
+   BOTTOM
+========================================================= */
+
+.candidate-bottom-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        minmax(0, 1.34fr)
+        minmax(410px, 0.86fr);
+
+    gap:
+        16px;
+}
+
+
+/* =========================================================
+   ACTIVITY
+========================================================= */
+
+.candidate-activity-card {
+
+    min-height:
+        233px;
+}
+
+
+.candidate-activity-header {
+
+    min-height:
+        60px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    padding:
+        0
+        16px;
+}
+
+
+.candidate-activity-title {
+
+    display:
+        flex;
+
+    align-items:
+        flex-start;
+
+    gap:
+        11px;
+}
+
+
+.candidate-activity-title > i {
+
+    color:
+        #244e83;
+
+    font-size:
+        17px;
+}
+
+
+.candidate-activity-title
+> div {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+}
+
+
+.candidate-activity-title strong {
+
+    color:
+        #111b3a;
+
+    font-size:
+        11px;
+}
+
+
+.candidate-activity-title span {
+
+    margin-top:
+        3px;
+
+    color:
+        #7184a3;
+
+    font-size:
+        8px;
+}
+
+
+.candidate-activity-header select {
+
+    min-width:
+        160px;
+
+    height:
+        31px;
+
+    padding:
+        0
+        12px;
+
+    border:
+        1px solid #dce5ee;
+
+    border-radius:
+        7px;
+
+    background:
+        #ffffff;
+
+    color:
+        #526987;
+
+    font-size:
+        8.5px;
+}
+
+
+.candidate-chart {
+
+    min-height:
+        165px;
+
+    padding:
+        0
+        12px
+        10px;
+}
+
+
+.candidate-chart-empty {
+
+    height:
+        150px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    color:
+        #8191a8;
+
+    font-size:
+        9px;
+}
+
+
+.candidate-chart-svg {
+
+    width:
+        100%;
+
+    height:
+        160px;
+}
+
+
+.candidate-chart-grid-line {
+
+    stroke:
+        #e7edf4;
+
+    stroke-width:
+        1;
+}
+
+
+.candidate-chart-axis-label {
+
+    fill:
+        #7184a3;
+
+    font-size:
+        8px;
+}
+
+
+.candidate-chart-area {
+
+    fill:
+        rgba(
+            11,
+            108,
+            242,
+            0.08
+        );
+}
+
+
+.candidate-chart-line {
+
+    fill:
+        none;
+
+    stroke:
+        #0b6cf2;
+
+    stroke-width:
+        2;
+}
+
+
+.candidate-chart-point {
+
+    fill:
+        #0b6cf2;
+
+    stroke:
+        #ffffff;
+
+    stroke-width:
+        1.5;
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.candidate-action-list {
+
+    padding:
+        0
+        14px
+        7px;
+}
+
+
+.candidate-action-item {
+
+    min-height:
+        54px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        12px;
+
+    padding:
+        7px
+        2px;
+
+    border-bottom:
+        1px solid #edf1f5;
+
+    color:
+        inherit;
+
+    text-decoration:
+        none;
+}
+
+
+.candidate-action-item:last-child {
+
+    border-bottom:
+        0;
+}
+
+
+.candidate-action-icon {
+
+    width:
+        44px;
+
+    height:
+        44px;
+
+    flex-shrink:
+        0;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        10px;
+
+    font-size:
+        17px;
+}
+
+
+.candidate-action-icon.green {
+
+    color:
+        #0ca880;
+
+    background:
+        #e8f8f2;
+}
+
+
+.candidate-action-icon.purple {
+
+    color:
+        #7047eb;
+
+    background:
+        #f0ebff;
+}
+
+
+.candidate-action-icon.blue {
+
+    color:
+        #0b6cf2;
+
+    background:
+        #e8f3ff;
+}
+
+
+.candidate-action-item > div {
+
+    flex:
+        1;
+}
+
+
+.candidate-action-item strong {
+
+    display:
+        block;
+
+    color:
+        #172541;
+
+    font-size:
+        9px;
+}
+
+
+.candidate-action-item p {
+
+    margin:
+        4px
+        0
+        0;
+
+    color:
+        #7184a3;
+
+    font-size:
+        8px;
+}
+
+
+.candidate-action-item
+> i {
+
+    color:
+        #1d3d6a;
+
+    font-size:
+        9px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media
+(max-width: 1280px) {
+
+    .candidate-stat-grid {
+
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+    }
+
+
+    .candidate-middle-grid {
+
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+    }
+
+
+    .candidate-middle-grid
+    .candidate-card:last-child {
+
+        grid-column:
+            1 / -1;
+    }
+
+
+    .candidate-bottom-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+}
+
+
+@media
+(max-width: 950px) {
+
+    .candidate-layout {
+
+        display:
+            block;
+    }
+
+
+    .candidate-sidebar {
+
+        position:
+            relative;
+
+        width:
+            100%;
+    }
+
+
+    .candidate-main {
+
+        width:
+            100%;
+    }
+
+
+    .candidate-menu {
+
+        display:
+            grid;
+
+        grid-template-columns:
+            repeat(
+                2,
+                1fr
+            );
+    }
+}
+
+
+@media
+(max-width: 700px) {
+
+    .candidate-topbar {
+
+        height:
+            auto;
+
+        flex-direction:
+            column;
+
+        align-items:
+            stretch;
+
+        padding:
+            15px;
+    }
+
+
+    .candidate-search {
+
+        width:
+            100%;
+    }
+
+
+    .candidate-topbar-right {
+
+        justify-content:
+            flex-end;
+    }
+
+
+    .candidate-profile-info {
+
+        display:
+            none;
+    }
+
+
+    .candidate-content {
+
+        padding:
+            20px
+            14px;
+    }
+
+
+    .candidate-page-heading {
+
+        flex-direction:
+            column;
+
+        align-items:
+            flex-start;
+    }
+
+
+    .candidate-quote {
+
+        display:
+            none;
+    }
+
+
+    .candidate-stat-grid,
+    .candidate-middle-grid,
+    .candidate-bottom-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .candidate-middle-grid
+    .candidate-card:last-child {
+
+        grid-column:
+            auto;
+    }
+
+
+    .candidate-menu {
+
+        grid-template-columns:
+            1fr;
+    }
+}

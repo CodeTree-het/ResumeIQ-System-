@@ -1,0 +1,1233 @@
+/* =========================================================
+   ResumeIQ - Final Login Page
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family:
+        "Inter",
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    color: #0b1738;
+}
+
+
+/* =========================================================
+   MAIN LOGIN PAGE
+   ========================================================= */
+
+.resumeiq-login-page {
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    background:
+        radial-gradient(
+            circle at 5% 15%,
+            rgba(205, 226, 255, 0.55),
+            transparent 18%
+        ),
+        linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #f9fcff 45%,
+            #eef7ff 100%
+        );
+}
+
+.login-page-wrapper {
+    position: relative;
+
+    min-height: 100vh;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(390px, 1fr)
+        minmax(480px, 0.95fr)
+        minmax(260px, 0.6fr);
+
+    align-items: center;
+
+    padding:
+        70px
+        7vw
+        95px;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   LEFT SECTION
+   ========================================================= */
+
+.login-left-section {
+    position: relative;
+    z-index: 4;
+
+    max-width: 520px;
+}
+
+
+/* =========================================================
+   WORDMARK
+   ========================================================= */
+
+.login-brand {
+    margin-bottom: 65px;
+}
+
+.resumeiq-wordmark {
+    display: inline-flex;
+    align-items: center;
+
+    font-size: 34px;
+    line-height: 1;
+
+    font-weight: 800;
+
+    letter-spacing: -1.6px;
+}
+
+.resume-word {
+    color: #0b1738;
+}
+
+.iq-word {
+    color: #1468f3;
+}
+
+.login-brand p,
+.login-card-brand p {
+    margin-top: 10px;
+    margin-bottom: 0;
+
+    color: #63769c;
+
+    font-size: 15px;
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.login-hero-content {
+    margin-bottom: 38px;
+}
+
+.login-hero-content h1 {
+    margin-bottom: 16px;
+
+    color: #0b1738;
+
+    font-size: clamp(
+        42px,
+        4vw,
+        59px
+    );
+
+    line-height: 1.05;
+
+    font-weight: 800;
+
+    letter-spacing: -2px;
+}
+
+.hero-description {
+    max-width: 470px;
+
+    margin: 0;
+
+    color: #687a9f;
+
+    font-size: 17px;
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   FEATURES
+   ========================================================= */
+
+.login-feature-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 28px;
+
+    margin-top: 30px;
+}
+
+.login-feature-item {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+}
+
+.feature-icon {
+    width: 58px;
+    height: 58px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-size: 26px;
+}
+
+.feature-icon-blue {
+    color: #176df3;
+
+    background:
+        rgba(34, 117, 255, 0.10);
+}
+
+.feature-icon-green {
+    color: #0fc49f;
+
+    background:
+        rgba(15, 196, 159, 0.11);
+}
+
+.feature-icon-purple {
+    color: #6849ff;
+
+    background:
+        rgba(104, 73, 255, 0.10);
+}
+
+.feature-content h3 {
+    margin: 0 0 5px;
+
+    color: #101b3d;
+
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.feature-content p {
+    margin: 0;
+
+    color: #7080a0;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   QUOTE
+   ========================================================= */
+
+.login-quote {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 17px;
+
+    margin-top: 48px;
+}
+
+.quote-line {
+    width: 3px;
+    height: 50px;
+
+    flex-shrink: 0;
+
+    border-radius: 2px;
+
+    background: #46d8c4;
+}
+
+.login-quote p {
+    margin: 0;
+
+    color: #66799e;
+
+    font-size: 17px;
+    line-height: 1.55;
+
+    font-style: italic;
+}
+
+
+/* =========================================================
+   CENTER SECTION
+   ========================================================= */
+
+.login-center-section {
+    position: relative;
+    z-index: 6;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding:
+        0
+        35px;
+}
+
+
+/* =========================================================
+   LOGIN CARD
+   ========================================================= */
+
+.login-card {
+    width: 100%;
+    max-width: 510px;
+
+    padding:
+        44px
+        46px
+        26px;
+
+    border-radius: 18px;
+
+    background:
+        rgba(255, 255, 255, 0.96);
+
+    border:
+        1px solid
+        #dfe8f3;
+
+    box-shadow:
+        0 20px 55px
+        rgba(67, 98, 141, 0.09);
+}
+
+.login-card-brand {
+    margin-bottom: 32px;
+
+    text-align: center;
+}
+
+.card-wordmark {
+    font-size: 36px;
+}
+
+.login-card-brand p {
+    margin-top: 8px;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   LOGIN CARD HEADING
+   ========================================================= */
+
+.login-card-heading {
+    margin-bottom: 27px;
+}
+
+.login-card-heading h2 {
+    margin-bottom: 7px;
+
+    color: #0b1738;
+
+    font-size: 28px;
+    font-weight: 800;
+
+    letter-spacing: -0.7px;
+}
+
+.login-card-heading p {
+    margin: 0;
+
+    color: #7281a0;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   ALERT
+   ========================================================= */
+
+#loginAlert {
+    margin-bottom: 18px;
+
+    padding:
+        11px
+        13px;
+
+    border-radius: 9px;
+
+    font-size: 13px;
+}
+
+#loginAlert.alert-danger {
+    color: #a43636;
+
+    background: #fff2f2;
+
+    border:
+        1px solid
+        #ffd6d6;
+}
+
+#loginAlert.alert-success {
+    color: #22764f;
+
+    background: #effaf5;
+
+    border:
+        1px solid
+        #caebda;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.resumeiq-form-group {
+    margin-bottom: 21px;
+}
+
+.resumeiq-form-label {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: #17213c;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.resumeiq-input-wrapper {
+    position: relative;
+
+    width: 100%;
+}
+
+.resumeiq-input {
+    width: 100%;
+    height: 53px;
+
+    padding:
+        12px
+        48px
+        12px
+        50px;
+
+    border:
+        1px solid
+        #cad7e8;
+
+    border-radius: 9px;
+
+    background: #ffffff;
+
+    color: #17213c;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.resumeiq-input::placeholder {
+    color: #8695b0;
+}
+
+.resumeiq-input:hover {
+    border-color: #aebed5;
+}
+
+.resumeiq-input:focus {
+    border-color: #1c72f3;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(28, 114, 243, 0.10);
+}
+
+.input-left-icon {
+    position: absolute;
+
+    top: 50%;
+    left: 17px;
+
+    transform:
+        translateY(-50%);
+
+    z-index: 2;
+
+    color: #50658d;
+
+    font-size: 19px;
+}
+
+
+/* =========================================================
+   PASSWORD
+   ========================================================= */
+
+.password-group {
+    margin-bottom: 6px;
+}
+
+.password-eye-button {
+    position: absolute;
+
+    top: 50%;
+    right: 15px;
+
+    transform:
+        translateY(-50%);
+
+    border: none;
+
+    padding: 4px;
+
+    background: transparent;
+
+    color: #516992;
+
+    font-size: 19px;
+
+    cursor: pointer;
+}
+
+.password-eye-button:hover {
+    color: #1468f3;
+}
+
+
+/* =========================================================
+   FORGOT PASSWORD
+   ========================================================= */
+
+.forgot-password-row {
+    display: flex;
+    justify-content: flex-end;
+
+    margin:
+        9px
+        0
+        22px;
+}
+
+.forgot-password-link {
+    color: #0869f7;
+
+    font-size: 13.5px;
+    font-weight: 500;
+
+    text-decoration: none;
+}
+
+.forgot-password-link:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   LOGIN BUTTON
+   ========================================================= */
+
+.resumeiq-login-button {
+    width: 100%;
+    height: 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #146af3 0%,
+            #0865ed 100%
+        );
+
+    color: #ffffff;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    box-shadow:
+        0 8px 22px
+        rgba(17, 103, 240, 0.22);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.resumeiq-login-button:hover {
+    transform:
+        translateY(-1px);
+
+    box-shadow:
+        0 11px 26px
+        rgba(17, 103, 240, 0.28);
+}
+
+.resumeiq-login-button:disabled {
+    opacity: 0.72;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+#loginArrow {
+    font-size: 19px;
+}
+
+
+/* =========================================================
+   DIVIDER
+   ========================================================= */
+
+.resumeiq-divider {
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        auto
+        1fr;
+
+    align-items: center;
+
+    gap: 17px;
+
+    margin:
+        30px
+        0
+        23px;
+}
+
+.resumeiq-divider span {
+    height: 1px;
+
+    background: #dce4ee;
+}
+
+.resumeiq-divider p {
+    margin: 0;
+
+    color: #7483a0;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   CREATE ACCOUNT
+   ========================================================= */
+
+.create-account-row {
+    text-align: center;
+
+    color: #6d7c99;
+
+    font-size: 13.5px;
+}
+
+.create-account-row a {
+    margin-left: 4px;
+
+    color: #076af7;
+
+    font-weight: 500;
+
+    text-decoration: none;
+}
+
+.create-account-row a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   AI ASSISTANCE
+   ========================================================= */
+
+.ai-assistance-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 13px;
+
+    margin-top: 34px;
+
+    padding-top: 23px;
+
+    border-top:
+        1px solid
+        #edf1f6;
+
+    color: #607292;
+
+    font-size: 12px;
+}
+
+.ai-shield-icon {
+    width: 39px;
+    height: 39px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: #0ac6a5;
+
+    background:
+        rgba(10, 198, 165, 0.10);
+
+    font-size: 19px;
+}
+
+.ai-info-icon {
+    color: #6d80a4;
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   RIGHT DECORATION
+   ========================================================= */
+
+.login-right-section {
+    position: relative;
+    z-index: 3;
+
+    align-self: stretch;
+}
+
+.right-decoration-wrapper {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    min-height: 560px;
+}
+
+
+/* =========================================================
+   RESUME ILLUSTRATION
+   ========================================================= */
+
+.resume-illustration {
+    position: absolute;
+
+    top: 95px;
+    right: 2%;
+
+    width: 180px;
+    height: 190px;
+
+    transform:
+        rotate(10deg);
+
+    border-radius: 18px;
+
+    background:
+        rgba(215, 233, 253, 0.50);
+
+    box-shadow:
+        0 18px 45px
+        rgba(61, 117, 180, 0.08);
+}
+
+.resume-illustration-inner {
+    position: absolute;
+
+    inset: 24px;
+
+    padding: 18px;
+
+    border-radius: 13px;
+
+    background:
+        rgba(255, 255, 255, 0.66);
+
+    border:
+        1px solid
+        rgba(201, 220, 243, 0.85);
+}
+
+.illustration-profile-row {
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    margin-bottom: 14px;
+}
+
+.illustration-avatar {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 7px;
+
+    background: #8fbef7;
+
+    color: #ffffff;
+
+    font-size: 16px;
+}
+
+.small-avatar {
+    width: 24px;
+    height: 24px;
+
+    font-size: 12px;
+}
+
+.illustration-lines {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.illustration-lines span {
+    display: block;
+
+    height: 7px;
+
+    border-radius: 5px;
+
+    background: #d8e6f7;
+}
+
+.illustration-lines span:first-child {
+    width: 85%;
+}
+
+.illustration-lines span:last-child {
+    width: 65%;
+}
+
+.illustration-bottom-lines {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-top: 14px;
+}
+
+.illustration-bottom-lines span {
+    display: block;
+
+    height: 7px;
+
+    border-radius: 5px;
+
+    background: #e1ebf7;
+}
+
+.illustration-bottom-lines span:first-child {
+    width: 83%;
+}
+
+.illustration-bottom-lines span:last-child {
+    width: 60%;
+}
+
+
+/* =========================================================
+   DECORATIVE STARS
+   ========================================================= */
+
+.decor-star {
+    position: absolute;
+
+    color: #91bffc;
+
+    font-size: 31px;
+}
+
+.star-one {
+    top: 28px;
+    right: 70px;
+}
+
+.star-two {
+    top: 170px;
+    left: 10px;
+
+    font-size: 24px;
+}
+
+
+/* =========================================================
+   CAREER NOTE
+   ========================================================= */
+
+.career-note {
+    position: absolute;
+
+    top: 335px;
+    right: 5px;
+
+    transform:
+        rotate(-5deg);
+}
+
+.career-note p {
+    margin: 0;
+
+    color: #8198bd;
+
+    font-family:
+        "Segoe Print",
+        "Comic Sans MS",
+        cursive;
+
+    font-size: 18px;
+    line-height: 1.5;
+
+    font-style: italic;
+}
+
+.career-note-line {
+    width: 130px;
+    height: 3px;
+
+    margin:
+        10px
+        auto
+        0;
+
+    border-radius: 50%;
+
+    background:
+        #97b8ea;
+
+    transform:
+        rotate(-10deg);
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.login-page-footer {
+    position: absolute;
+
+    left: 2%;
+    right: 2%;
+    bottom: 23px;
+
+    z-index: 8;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: #657797;
+
+    font-size: 11.5px;
+}
+
+.footer-left,
+.footer-right {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+.footer-right {
+    gap: 28px;
+}
+
+.footer-right a {
+    color: #657797;
+
+    text-decoration: none;
+}
+
+.footer-right a:hover {
+    color: #126cf3;
+}
+
+
+/* =========================================================
+   DECORATIVE BACKGROUND
+   ========================================================= */
+
+.background-circle {
+    position: absolute;
+
+    top: -90px;
+    left: -105px;
+
+    width: 230px;
+    height: 230px;
+
+    z-index: 0;
+
+    border-radius: 50%;
+
+    background:
+        rgba(223, 239, 255, 0.48);
+}
+
+.background-mountain {
+    position: absolute;
+
+    z-index: 0;
+
+    bottom: -190px;
+
+    transform:
+        rotate(45deg);
+
+    border-radius:
+        36px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(194, 225, 255, 0.72),
+            rgba(220, 239, 255, 0.25)
+        );
+}
+
+.mountain-one {
+    width: 470px;
+    height: 470px;
+
+    right: -95px;
+}
+
+.mountain-two {
+    width: 330px;
+    height: 330px;
+
+    right: 235px;
+    bottom: -220px;
+
+    background:
+        rgba(227, 241, 255, 0.65);
+}
+
+
+/* =========================================================
+   RESPONSIVE - LAPTOP
+   ========================================================= */
+
+@media (max-width: 1250px) {
+
+    .login-page-wrapper {
+        grid-template-columns:
+            minmax(350px, 0.9fr)
+            minmax(450px, 1fr);
+
+        padding:
+            55px
+            5vw
+            90px;
+    }
+
+    .login-right-section {
+        display: none;
+    }
+
+    .login-card {
+        max-width: 490px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .login-page-wrapper {
+        display: flex;
+        flex-direction: column;
+
+        gap: 50px;
+
+        padding:
+            40px
+            22px
+            100px;
+    }
+
+    .login-left-section {
+        width: 100%;
+        max-width: 620px;
+    }
+
+    .login-brand {
+        margin-bottom: 38px;
+    }
+
+    .login-hero-content h1 {
+        font-size: 45px;
+    }
+
+    .login-center-section {
+        width: 100%;
+
+        padding: 0;
+    }
+
+    .login-card {
+        max-width: 520px;
+    }
+
+    .login-page-footer {
+        position: relative;
+
+        left: auto;
+        right: auto;
+        bottom: auto;
+
+        width: 100%;
+
+        margin-top: 5px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+   ========================================================= */
+
+@media (max-width: 580px) {
+
+    .login-page-wrapper {
+        gap: 35px;
+
+        padding:
+            28px
+            15px
+            45px;
+    }
+
+    .login-left-section {
+        text-align: left;
+    }
+
+    .resumeiq-wordmark {
+        font-size: 29px;
+    }
+
+    .login-brand {
+        margin-bottom: 30px;
+    }
+
+    .login-hero-content h1 {
+        font-size: 37px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .feature-icon {
+        width: 48px;
+        height: 48px;
+
+        font-size: 21px;
+    }
+
+    .feature-content h3 {
+        font-size: 15px;
+    }
+
+    .feature-content p {
+        font-size: 12.5px;
+    }
+
+    .login-quote {
+        margin-top: 35px;
+    }
+
+    .login-card {
+        padding:
+            35px
+            23px
+            24px;
+
+        border-radius: 15px;
+    }
+
+    .card-wordmark {
+        font-size: 31px;
+    }
+
+    .login-card-heading h2 {
+        font-size: 25px;
+    }
+
+    .login-page-footer {
+        flex-direction: column;
+
+        gap: 16px;
+
+        text-align: center;
+    }
+
+    .footer-left {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer-right {
+        gap: 20px;
+    }
+
+}

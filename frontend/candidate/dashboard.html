@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        ResumeIQ | Candidate Dashboard
+    </title>
+
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+
+    <!-- Common CSS -->
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+
+    <!-- Candidate CSS -->
+    <link
+        rel="stylesheet"
+        href="../css/candidate.css?v=20260929-my-resumes"
+    >
+
+
+    <!-- ResumeIQ Chatbot CSS -->
+    <link
+        rel="stylesheet"
+        href="../css/chatbot.css"
+    >
+
+</head>
+
+
+<body
+    class="candidate-dashboard-page"
+    style="visibility: hidden;"
+>
+
+<div class="candidate-layout">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="candidate-sidebar">
+
+        <div>
+
+
+            <!-- BRAND -->
+
+            <div class="candidate-brand">
+
+                <div class="resumeiq-wordmark">
+
+                    <span class="resume-word">
+                        Resume
+                    </span>
+
+                    <span class="iq-word">
+                        IQ
+                    </span>
+
+                </div>
+
+
+                <p>
+                    AI-Powered Resume Intelligence
+                </p>
+
+            </div>
+
+
+
+            <!-- MENU -->
+
+            <nav class="candidate-menu">
+
+
+                <!-- Dashboard -->
+
+                <a
+                    href="dashboard.html"
+                    class="candidate-menu-link active"
+                >
+
+                    <i class="bi bi-house-door"></i>
+
+                    <span>
+                        Dashboard
+                    </span>
+
+                </a>
+
+
+                <!-- My Resumes -->
+
+                <a
+                    href="resumes.html"
+                    class="candidate-menu-link"
+                >
+
+                    <i class="bi bi-file-earmark-text"></i>
+
+                    <span>
+                        My Resumes
+                    </span>
+
+                </a>
+
+
+                <!-- Upload Resume -->
+
+                <a
+                    href="resume.html"
+                    class="candidate-menu-link"
+                >
+
+                    <i class="bi bi-upload"></i>
+
+                    <span>
+                        Upload Resume
+                    </span>
+
+                </a>
+
+
+                <!-- Analysis -->
+
+                <a
+                    href="analysis.html"
+                    class="candidate-menu-link"
+                >
+
+                    <i class="bi bi-bar-chart"></i>
+
+                    <span>
+                        Analysis
+                    </span>
+
+                </a>
+
+
+                <!-- Job Match -->
+
+                <a
+                    href="jobs.html"
+                    class="candidate-menu-link"
+                >
+
+                    <i class="bi bi-briefcase"></i>
+
+                    <span>
+                        Job Match
+                    </span>
+
+                </a>
+
+
+                <!-- Skill Gap -->
+
+                <a
+                    href="#"
+                    class="candidate-menu-link"
+                >
+
+                    <i class="bi bi-bullseye"></i>
+
+                    <span>
+                        Skill Gap
+                    </span>
+
+                </a>
+
+
+                <!-- Recommendations -->
+
+                <a
+                    href="recommendations.html"
+                    class="candidate-menu-link"
+                >
+
+                    <i class="bi bi-lightbulb"></i>
+
+                    <span>
+                        Recommendations
+                    </span>
+
+                </a>
+
+
+                <!-- Settings -->
+
+                <a
+                    href="settings.html"
+                    class="candidate-menu-link"
+                >
+
+                    <i class="bi bi-gear"></i>
+
+                    <span>
+                        Settings
+                    </span>
+
+                </a>
+
+            </nav>
+
+        </div>
+
+
+
+        <!-- SIDEBAR BOTTOM -->
+
+        <div class="candidate-sidebar-bottom">
+
+
+            <div class="candidate-career-box">
+
+                <div class="career-icon">
+
+                    <i class="bi bi-rocket-takeoff-fill"></i>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        Build a Smarter
+                        <br>
+                        Career with AI
+                    </strong>
+
+                    <p>
+                        Better insights.
+                        Brighter opportunities.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="candidate-sidebar-footer">
+
+                <p>
+                    © 2026 ResumeIQ
+                </p>
+
+                <span>
+                    Your Skills. A Smarter Tomorrow.
+                </span>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="candidate-main">
+
+
+        <!-- =================================================
+             TOPBAR
+        ================================================== -->
+
+        <header class="candidate-topbar">
+
+
+            <!-- SEARCH -->
+
+            <div class="candidate-search">
+
+                <i class="bi bi-search"></i>
+
+                <input
+                    type="text"
+                    placeholder="Search jobs, skills, or resume insights..."
+                >
+
+            </div>
+
+
+
+            <!-- TOP RIGHT -->
+
+            <div class="candidate-topbar-right">
+
+
+                <!-- NOTIFICATION -->
+
+                <button
+                    type="button"
+                    class="candidate-notification"
+                    aria-label="Notifications"
+                >
+
+                    <i class="bi bi-bell"></i>
+
+                    <span></span>
+
+                </button>
+
+
+
+                <!-- PROFILE WRAPPER -->
+
+                <div class="candidate-profile-wrapper">
+
+
+                    <!-- PROFILE TRIGGER -->
+
+                    <button
+                        type="button"
+                        class="candidate-profile candidate-profile-trigger"
+                        id="candidateProfileTrigger"
+                        aria-expanded="false"
+                    >
+
+                        <div
+                            class="candidate-avatar"
+                            data-candidate-avatar
+                        >
+                            C
+                        </div>
+
+
+                        <div class="candidate-profile-info">
+
+                            <strong data-candidate-name>
+                                Candidate
+                            </strong>
+
+                            <span data-candidate-role>
+                                Candidate
+                            </span>
+
+                        </div>
+
+
+                        <i
+                            class="bi bi-chevron-down candidate-profile-chevron"
+                            id="candidateProfileChevron"
+                        ></i>
+
+                    </button>
+
+
+
+                    <!-- =================================================
+                         DROPDOWN
+                    ================================================== -->
+
+                    <div
+                        class="candidate-profile-dropdown"
+                        id="candidateProfileDropdown"
+                    >
+
+
+                        <!-- USER INFO -->
+
+                        <div class="candidate-dropdown-user">
+
+                            <div
+                                class="candidate-dropdown-avatar"
+                                data-candidate-avatar
+                            >
+                                C
+                            </div>
+
+
+                            <div class="candidate-dropdown-user-info">
+
+                                <strong data-candidate-name>
+                                    Candidate
+                                </strong>
+
+                                <span data-candidate-email>
+                                    candidate@email.com
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="candidate-dropdown-divider"></div>
+
+
+
+                        <!-- PROFILE -->
+
+                        <a
+                            href="profile.html"
+                            class="candidate-dropdown-item"
+                        >
+
+                            <span class="candidate-dropdown-icon profile">
+
+                                <i class="bi bi-person"></i>
+
+                            </span>
+
+
+                            <div class="candidate-dropdown-item-copy">
+
+                                <strong>
+                                    Profile
+                                </strong>
+
+                                <small>
+                                    View your account
+                                </small>
+
+                            </div>
+
+
+                            <i class="bi bi-chevron-right candidate-dropdown-arrow"></i>
+
+                        </a>
+
+
+
+                        <!-- SETTINGS -->
+
+                        <a
+                            href="settings.html"
+                            class="candidate-dropdown-item"
+                        >
+
+                            <span class="candidate-dropdown-icon settings">
+
+                                <i class="bi bi-gear"></i>
+
+                            </span>
+
+
+                            <div class="candidate-dropdown-item-copy">
+
+                                <strong>
+                                    Settings
+                                </strong>
+
+                                <small>
+                                    Manage your account
+                                </small>
+
+                            </div>
+
+
+                            <i class="bi bi-chevron-right candidate-dropdown-arrow"></i>
+
+                        </a>
+
+
+
+                        <!-- LOGOUT -->
+
+                        <button
+                            type="button"
+                            class="candidate-dropdown-item candidate-logout-item"
+                            id="candidateLogoutButton"
+                        >
+
+                            <span class="candidate-dropdown-icon logout">
+
+                                <i class="bi bi-box-arrow-right"></i>
+
+                            </span>
+
+
+                            <div class="candidate-dropdown-item-copy">
+
+                                <strong>
+                                    Logout
+                                </strong>
+
+                                <small>
+                                    Sign out of ResumeIQ
+                                </small>
+
+                            </div>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             CONTENT
+        ================================================== -->
+
+        <section class="candidate-content">
+
+
+            <!-- =================================================
+                 PAGE HEADING
+            ================================================== -->
+
+            <div class="candidate-page-heading">
+
+                <div>
+
+                    <p>
+                        Welcome back,
+                    </p>
+
+
+                    <h1>
+                        Candidate Dashboard
+                    </h1>
+
+
+                    <span>
+                        Track your resume, skills, and career opportunities — all in one place.
+                    </span>
+
+                </div>
+
+
+
+                <div class="candidate-quote">
+
+                    <span></span>
+
+                    <p>
+                        “A better resume opens
+                        <br>
+                        a brighter tomorrow.”
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 TOP STAT CARDS
+            ================================================== -->
+
+            <div class="candidate-stat-grid">
+
+
+                <!-- ACTIVE RESUME -->
+
+                <div class="candidate-stat-card">
+
+                    <div class="candidate-stat-icon blue">
+
+                        <i class="bi bi-file-earmark-text"></i>
+
+                    </div>
+
+
+                    <div class="candidate-stat-content">
+
+                        <strong class="candidate-stat-title">
+                            Active Resume
+                        </strong>
+
+
+                        <div class="candidate-stat-number-row">
+
+                            <h2 id="activeResumeCount">
+                                0
+                            </h2>
+
+
+                            <i class="bi bi-chevron-right"></i>
+
+                        </div>
+
+
+                        <p class="candidate-active-resume-name">
+
+                            <span class="candidate-green-dot"></span>
+
+                            <span id="activeResumeName">
+                                No resume uploaded
+                            </span>
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- RESUME SCORE -->
+
+                <div class="candidate-stat-card">
+
+                    <div class="candidate-stat-icon green">
+
+                        <i class="bi bi-bar-chart-fill"></i>
+
+                    </div>
+
+
+                    <div class="candidate-stat-content">
+
+                        <strong class="candidate-stat-title">
+                            Resume Score
+                        </strong>
+
+
+                        <div class="candidate-stat-number-row">
+
+                            <h2 id="candidateResumeScore">
+
+                                --
+
+                                <small>
+                                    /100
+                                </small>
+
+                            </h2>
+
+
+                            <span
+                                class="candidate-trend"
+                                id="resumeScoreTrend"
+                                hidden
+                            ></span>
+
+                        </div>
+
+
+                        <p id="resumeScoreMessage">
+                            Analyse resume to view score
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- EXTRACTED SKILLS -->
+
+                <div class="candidate-stat-card">
+
+                    <div class="candidate-stat-icon purple">
+
+                        <i class="bi bi-layers"></i>
+
+                    </div>
+
+
+                    <div class="candidate-stat-content">
+
+                        <strong class="candidate-stat-title">
+                            Extracted Skills
+                        </strong>
+
+
+                        <div class="candidate-stat-number-row">
+
+                            <h2 id="candidateSkillCount">
+                                --
+                            </h2>
+
+
+                            <span
+                                class="candidate-trend"
+                                id="skillTrend"
+                                hidden
+                            ></span>
+
+                        </div>
+
+
+                        <p>
+                            Skills identified from your resume
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- JOB MATCH -->
+
+                <div class="candidate-stat-card">
+
+                    <div class="candidate-stat-icon blue">
+
+                        <i class="bi bi-bullseye"></i>
+
+                    </div>
+
+
+                    <div class="candidate-stat-content">
+
+                        <strong class="candidate-stat-title">
+                            Job Match Score
+                        </strong>
+
+
+                        <div class="candidate-stat-number-row">
+
+                            <h2 id="candidateJobMatchScore">
+                                --%
+                            </h2>
+
+                        </div>
+
+
+                        <p id="jobMatchMessage">
+                            Available after job matching
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 MIDDLE GRID
+            ================================================== -->
+
+            <div class="candidate-middle-grid">
+
+
+                <!-- =================================================
+                     RECENT RESUME
+                ================================================== -->
+
+                <div class="candidate-card">
+
+                    <div class="candidate-card-header">
+
+                        <div>
+
+                            <i class="bi bi-file-earmark-text"></i>
+
+                            <strong>
+                                Recent Resume
+                            </strong>
+
+                        </div>
+
+
+                        <a href="resumes.html">
+
+                            View All
+
+                            <i class="bi bi-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="candidate-recent-wrapper">
+
+                        <div class="candidate-recent-resume">
+
+                            <div
+                                class="candidate-file-icon"
+                                id="recentResumeFileIcon"
+                            >
+
+                                <span>
+                                    PDF
+                                </span>
+
+                            </div>
+
+
+                            <div class="candidate-resume-info">
+
+                                <strong id="recentResumeName">
+                                    No resume uploaded
+                                </strong>
+
+
+                                <p id="recentResumeMeta">
+                                    Upload your first resume
+                                </p>
+
+
+                                <span
+                                    class="candidate-active-badge"
+                                    id="recentResumeStatus"
+                                >
+
+                                    <i class="bi bi-caret-up-fill"></i>
+
+                                    Active
+
+                                </span>
+
+                            </div>
+
+
+                            <button
+                                type="button"
+                                class="candidate-more-button"
+                            >
+
+                                <i class="bi bi-three-dots-vertical"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     RESUME CONTENT OVERVIEW
+                ================================================== -->
+
+                <div class="candidate-card">
+
+                    <div class="candidate-card-header">
+
+                        <div>
+
+                            <i class="bi bi-file-earmark-text"></i>
+
+                            <strong>
+                                Resume Content Overview
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="candidate-overview-list">
+
+
+                        <div class="candidate-overview-row">
+
+                            <div>
+
+                                <span class="candidate-overview-icon blue">
+
+                                    <i class="bi bi-person-fill"></i>
+
+                                </span>
+
+                                <span>
+                                    Summary
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong data-section-summary>
+                                    0
+                                </strong>
+
+                                <i class="bi bi-chevron-right"></i>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="candidate-overview-row">
+
+                            <div>
+
+                                <span class="candidate-overview-icon purple">
+
+                                    <i class="bi bi-person-gear"></i>
+
+                                </span>
+
+                                <span>
+                                    Skills
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong data-section-skills>
+                                    0
+                                </strong>
+
+                                <i class="bi bi-chevron-right"></i>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="candidate-overview-row">
+
+                            <div>
+
+                                <span class="candidate-overview-icon teal">
+
+                                    <i class="bi bi-mortarboard-fill"></i>
+
+                                </span>
+
+                                <span>
+                                    Education
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong data-section-education>
+                                    0
+                                </strong>
+
+                                <i class="bi bi-chevron-right"></i>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="candidate-overview-row">
+
+                            <div>
+
+                                <span class="candidate-overview-icon red">
+
+                                    <i class="bi bi-briefcase-fill"></i>
+
+                                </span>
+
+                                <span>
+                                    Projects
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong data-section-projects>
+                                    0
+                                </strong>
+
+                                <i class="bi bi-chevron-right"></i>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="candidate-overview-row">
+
+                            <div>
+
+                                <span class="candidate-overview-icon red">
+
+                                    <i class="bi bi-patch-check-fill"></i>
+
+                                </span>
+
+                                <span>
+                                    Certifications
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong data-section-certifications>
+                                    0
+                                </strong>
+
+                                <i class="bi bi-chevron-right"></i>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     TOP SKILLS
+                ================================================== -->
+
+                <div class="candidate-card">
+
+                    <div class="candidate-card-header">
+
+                        <div>
+
+                            <i class="bi bi-bar-chart-fill"></i>
+
+                            <strong>
+                                Top Extracted Skills
+                            </strong>
+
+                        </div>
+
+
+                        <a href="analysis.html">
+
+                            View All
+
+                            <i class="bi bi-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+
+                    <div
+                        class="candidate-skill-list"
+                        id="candidateTopSkills"
+                    >
+
+                        <span class="candidate-skill-empty">
+                            Analyse your resume to view skills
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 BOTTOM GRID
+            ================================================== -->
+
+            <div class="candidate-bottom-grid">
+
+
+                <!-- RESUME ACTIVITY -->
+
+                <div class="candidate-card candidate-activity-card">
+
+                    <div class="candidate-activity-header">
+
+
+                        <div class="candidate-activity-title">
+
+                            <i class="bi bi-graph-up"></i>
+
+
+                            <div>
+
+                                <strong>
+                                    Resume Activity
+                                </strong>
+
+                                <span>
+                                    Track your progress over time.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <select>
+
+                            <option>
+                                Resume Score
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div
+                        class="candidate-chart"
+                        id="candidateResumeActivityChart"
+                    >
+
+                        <div class="candidate-chart-empty">
+
+                            Upload and analyze resumes to see your score history.
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- RECOMMENDED NEXT STEPS -->
+
+                <div class="candidate-card">
+
+                    <div class="candidate-card-header">
+
+                        <div>
+
+                            <i class="bi bi-lightbulb"></i>
+
+                            <strong>
+                                Recommended Next Steps
+                            </strong>
+
+                        </div>
+
+
+                        <a href="recommendations.html">
+
+                            View All
+
+                            <i class="bi bi-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="candidate-action-list">
+
+
+                        <!-- UPLOAD NEW RESUME -->
+
+                        <a
+                            href="resume.html"
+                            class="candidate-action-item"
+                        >
+
+                            <span class="candidate-action-icon green">
+
+                                <i class="bi bi-upload"></i>
+
+                            </span>
+
+
+                            <div>
+
+                                <strong>
+                                    Upload a new resume
+                                </strong>
+
+                                <p>
+                                    Keep your profile updated for better matches
+                                </p>
+
+                            </div>
+
+
+                            <i class="bi bi-chevron-right"></i>
+
+                        </a>
+
+
+
+                        <!-- JOB MATCH -->
+
+                        <a
+                            href="jobs.html"
+                            class="candidate-action-item"
+                        >
+
+                            <span class="candidate-action-icon purple">
+
+                                <i class="bi bi-bullseye"></i>
+
+                            </span>
+
+
+                            <div>
+
+                                <strong>
+                                    Find matching jobs
+                                </strong>
+
+                                <p>
+                                    Explore jobs that fit your skills
+                                </p>
+
+                            </div>
+
+
+                            <i class="bi bi-chevron-right"></i>
+
+                        </a>
+
+
+
+                        <!-- RECOMMENDATIONS -->
+
+                        <a
+                            href="recommendations.html"
+                            class="candidate-action-item"
+                        >
+
+                            <span class="candidate-action-icon blue">
+
+                                <i class="bi bi-bar-chart-fill"></i>
+
+                            </span>
+
+
+                            <div>
+
+                                <strong>
+                                    Improve your skill gap
+                                </strong>
+
+                                <p>
+                                    Get AI-powered recommendations
+                                </p>
+
+                            </div>
+
+
+                            <i class="bi bi-chevron-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+
+<!-- =====================================================
+     JS
+====================================================== -->
+
+<script src="../js/auth.js"></script>
+
+<script src="../js/candidate.js?v=20260929-my-resumes"></script>
+
+
+<script>
+
+async function protectCandidateDashboard() {
+
+    try {
+
+        const token =
+            getToken();
+
+
+        if (!token) {
+
+            window.location.replace(
+                "../auth/login.html"
+            );
+
+            return;
+        }
+
+
+        const user =
+            await getCurrentUser(
+                token
+            );
+
+
+        if (!user) {
+
+            window.location.replace(
+                "../auth/login.html"
+            );
+
+            return;
+        }
+
+
+        const role =
+            String(
+                user.role || ""
+            )
+            .trim()
+            .toLowerCase();
+
+
+        if (
+            role === "candidate"
+        ) {
+
+            document.body.style.visibility =
+                "visible";
+
+            return;
+        }
+
+
+        redirectByRole(
+            role
+        );
+
+
+    } catch (error) {
+
+        console.error(
+            "Candidate authentication failed:",
+            error
+        );
+
+
+        if (
+            typeof logoutUser ===
+            "function"
+        ) {
+
+            logoutUser();
+
+        } else {
+
+            window.location.replace(
+                "../auth/login.html"
+            );
+        }
+    }
+}
+
+
+protectCandidateDashboard();
+
+</script>
+
+
+<!-- =====================================================
+     RESUMEIQ CHATBOT
+====================================================== -->
+
+<script src="../js/chatbot.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,766 @@
+/* =========================================================
+   RESUMEIQ CHATBOT
+   Dark Robot Floating Assistant
+========================================================= */
+
+:root {
+    --chatbot-bg: #0f1115;
+    --chatbot-bg-soft: #171a21;
+    --chatbot-bg-light: #20242d;
+    --chatbot-border: rgba(255, 255, 255, 0.08);
+    --chatbot-text: #f5f7fb;
+    --chatbot-muted: #9ba3b4;
+    --chatbot-accent: #ffffff;
+    --chatbot-user: #2a2f3a;
+    --chatbot-bot: #171a21;
+}
+
+
+/* =========================================================
+   FLOATING ROBOT BUTTON
+========================================================= */
+
+.resumeiq-chatbot-button {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+
+    width: 64px;
+    height: 64px;
+
+    border: none;
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #181b22,
+            #090a0d
+        );
+
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    z-index: 99999;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.45),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.resumeiq-chatbot-button:hover {
+    transform: scale(1.07);
+
+    box-shadow:
+        0 14px 34px rgba(0, 0, 0, 0.55),
+        0 0 0 5px rgba(255, 255, 255, 0.04);
+}
+
+
+.resumeiq-chatbot-button:active {
+    transform: scale(0.96);
+}
+
+
+/* =========================================================
+   ROBOT FACE
+========================================================= */
+
+.resumeiq-robot-face {
+    width: 39px;
+    height: 34px;
+
+    border-radius: 13px;
+
+    border: 2px solid rgba(255, 255, 255, 0.9);
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            180deg,
+            #22262f,
+            #111318
+        );
+}
+
+
+.resumeiq-robot-face::before {
+    content: "";
+
+    position: absolute;
+
+    top: -9px;
+    left: 50%;
+
+    width: 2px;
+    height: 8px;
+
+    transform: translateX(-50%);
+
+    background: #ffffff;
+
+    border-radius: 4px;
+}
+
+
+.resumeiq-robot-face::after {
+    content: "";
+
+    position: absolute;
+
+    top: -12px;
+    left: 50%;
+
+    width: 5px;
+    height: 5px;
+
+    transform: translateX(-50%);
+
+    background: #ffffff;
+
+    border-radius: 50%;
+}
+
+
+.resumeiq-robot-eyes {
+    display: flex;
+    gap: 9px;
+
+    position: absolute;
+
+    top: 10px;
+}
+
+
+.resumeiq-robot-eye {
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 8px rgba(255, 255, 255, 0.65);
+}
+
+
+.resumeiq-robot-mouth {
+    position: absolute;
+
+    bottom: 7px;
+
+    width: 13px;
+    height: 3px;
+
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.8);
+}
+
+
+/* =========================================================
+   NOTIFICATION DOT
+========================================================= */
+
+.resumeiq-chatbot-dot {
+    position: absolute;
+
+    top: 4px;
+    right: 4px;
+
+    width: 10px;
+    height: 10px;
+
+    background: #ffffff;
+
+    border-radius: 50%;
+
+    border: 2px solid #0f1115;
+
+    animation:
+        resumeiqBotPulse 1.8s infinite;
+}
+
+
+@keyframes resumeiqBotPulse {
+
+    0% {
+        box-shadow:
+            0 0 0 0 rgba(255, 255, 255, 0.3);
+    }
+
+    70% {
+        box-shadow:
+            0 0 0 7px rgba(255, 255, 255, 0);
+    }
+
+    100% {
+        box-shadow:
+            0 0 0 0 rgba(255, 255, 255, 0);
+    }
+}
+
+
+/* =========================================================
+   CHAT WINDOW
+========================================================= */
+
+.resumeiq-chatbot-window {
+    position: fixed;
+
+    right: 24px;
+    bottom: 100px;
+
+    width: 370px;
+    max-width: calc(100vw - 32px);
+
+    height: 560px;
+    max-height: calc(100vh - 135px);
+
+    background: var(--chatbot-bg);
+
+    border: 1px solid var(--chatbot-border);
+
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 99998;
+
+    box-shadow:
+        0 24px 70px rgba(0, 0, 0, 0.55);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform:
+        translateY(16px)
+        scale(0.97);
+
+    transform-origin:
+        bottom right;
+
+    transition:
+        opacity 0.22s ease,
+        visibility 0.22s ease,
+        transform 0.22s ease;
+}
+
+
+.resumeiq-chatbot-window.active {
+    opacity: 1;
+    visibility: visible;
+
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.resumeiq-chatbot-header {
+    min-height: 75px;
+
+    padding: 15px 17px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background:
+        linear-gradient(
+            180deg,
+            #191c23,
+            #121419
+        );
+
+    border-bottom: 1px solid var(--chatbot-border);
+}
+
+
+.resumeiq-chatbot-header-left {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.resumeiq-chatbot-header-avatar {
+    width: 44px;
+    height: 44px;
+
+    border-radius: 50%;
+
+    background: #0b0c10;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.resumeiq-chatbot-header-avatar .resumeiq-robot-face {
+    transform: scale(0.72);
+}
+
+
+.resumeiq-chatbot-title {
+    margin: 0;
+
+    color: var(--chatbot-text);
+
+    font-size: 15px;
+    font-weight: 700;
+}
+
+
+.resumeiq-chatbot-status {
+    margin-top: 3px;
+
+    color: var(--chatbot-muted);
+
+    font-size: 11px;
+}
+
+
+.resumeiq-chatbot-status::before {
+    content: "";
+
+    display: inline-block;
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    margin-right: 5px;
+}
+
+
+.resumeiq-chatbot-close {
+    width: 34px;
+    height: 34px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: transparent;
+
+    color: #aeb5c2;
+
+    font-size: 21px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.resumeiq-chatbot-close:hover {
+    background: rgba(255, 255, 255, 0.06);
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   CHAT BODY
+========================================================= */
+
+.resumeiq-chatbot-body {
+    flex: 1;
+
+    padding: 17px;
+
+    overflow-y: auto;
+
+    scroll-behavior: smooth;
+}
+
+
+.resumeiq-chatbot-body::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+.resumeiq-chatbot-body::-webkit-scrollbar-thumb {
+    background: #343945;
+
+    border-radius: 20px;
+}
+
+
+/* =========================================================
+   MESSAGE ROW
+========================================================= */
+
+.resumeiq-chat-message {
+    display: flex;
+
+    margin-bottom: 14px;
+}
+
+
+.resumeiq-chat-message.bot {
+    justify-content: flex-start;
+}
+
+
+.resumeiq-chat-message.user {
+    justify-content: flex-end;
+}
+
+
+/* =========================================================
+   MESSAGE BUBBLE
+========================================================= */
+
+.resumeiq-chat-bubble {
+    max-width: 82%;
+
+    padding: 11px 13px;
+
+    border-radius: 15px;
+
+    font-size: 13px;
+
+    line-height: 1.55;
+
+    word-wrap: break-word;
+}
+
+
+.resumeiq-chat-message.bot
+.resumeiq-chat-bubble {
+
+    background: var(--chatbot-bot);
+
+    color: #e9edf5;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.06);
+
+    border-bottom-left-radius: 5px;
+}
+
+
+.resumeiq-chat-message.user
+.resumeiq-chat-bubble {
+
+    background: var(--chatbot-user);
+
+    color: #ffffff;
+
+    border-bottom-right-radius: 5px;
+}
+
+
+/* =========================================================
+   BOT LABEL
+========================================================= */
+
+.resumeiq-chat-bot-label {
+    margin-bottom: 6px;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    color: #8f98aa;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.6px;
+}
+
+
+/* =========================================================
+   QUICK ACTIONS
+========================================================= */
+
+.resumeiq-chatbot-quick-actions {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin-top: 11px;
+}
+
+
+.resumeiq-chatbot-quick-button {
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.1);
+
+    background: #20242d;
+
+    color: #dfe4ec;
+
+    padding: 7px 10px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.18s ease,
+        border-color 0.18s ease;
+}
+
+
+.resumeiq-chatbot-quick-button:hover {
+    background: #2a2f39;
+
+    border-color:
+        rgba(255, 255, 255, 0.2);
+}
+
+
+/* =========================================================
+   TYPING
+========================================================= */
+
+.resumeiq-chatbot-typing {
+    display: inline-flex;
+
+    gap: 4px;
+
+    align-items: center;
+}
+
+
+.resumeiq-chatbot-typing span {
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: #858d9d;
+
+    animation:
+        resumeiqTyping 1.2s infinite;
+}
+
+
+.resumeiq-chatbot-typing span:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+
+.resumeiq-chatbot-typing span:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+
+@keyframes resumeiqTyping {
+
+    0%,
+    60%,
+    100% {
+        transform: translateY(0);
+        opacity: 0.45;
+    }
+
+    30% {
+        transform: translateY(-4px);
+        opacity: 1;
+    }
+}
+
+
+/* =========================================================
+   INPUT AREA
+========================================================= */
+
+.resumeiq-chatbot-footer {
+    padding: 13px;
+
+    background: #111318;
+
+    border-top:
+        1px solid
+        var(--chatbot-border);
+}
+
+
+.resumeiq-chatbot-input-wrapper {
+    min-height: 48px;
+
+    background: #1a1d24;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    border-radius: 15px;
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 5px;
+}
+
+
+.resumeiq-chatbot-input {
+    flex: 1;
+
+    min-height: 38px;
+    max-height: 100px;
+
+    border: none;
+    outline: none;
+
+    resize: none;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    padding: 9px 10px;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    line-height: 1.4;
+}
+
+
+.resumeiq-chatbot-input::placeholder {
+    color: #727b8c;
+}
+
+
+/* =========================================================
+   SEND BUTTON
+========================================================= */
+
+.resumeiq-chatbot-send {
+    flex-shrink: 0;
+
+    width: 38px;
+    height: 38px;
+
+    border: none;
+
+    border-radius: 11px;
+
+    background: #ffffff;
+
+    color: #111318;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    font-size: 17px;
+
+    transition:
+        transform 0.18s ease,
+        opacity 0.18s ease;
+}
+
+
+.resumeiq-chatbot-send:hover {
+    transform: scale(1.05);
+}
+
+
+.resumeiq-chatbot-send:disabled {
+    opacity: 0.45;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+/* =========================================================
+   SMALL FOOTER TEXT
+========================================================= */
+
+.resumeiq-chatbot-footer-note {
+    margin-top: 7px;
+
+    text-align: center;
+
+    font-size: 9px;
+
+    color: #6e7685;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (
+    max-width: 576px
+) {
+
+    .resumeiq-chatbot-button {
+        right: 16px;
+        bottom: 16px;
+
+        width: 58px;
+        height: 58px;
+    }
+
+
+    .resumeiq-chatbot-window {
+        right: 12px;
+        bottom: 86px;
+
+        width:
+            calc(
+                100vw - 24px
+            );
+
+        max-width: none;
+
+        height:
+            calc(
+                100vh - 110px
+            );
+
+        max-height: none;
+
+        border-radius: 18px;
+    }
+}

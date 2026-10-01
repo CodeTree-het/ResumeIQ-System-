@@ -1,0 +1,1534 @@
+/* =========================================================
+   ResumeIQ - Register + Email OTP Verification
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.register-page {
+    margin: 0;
+    min-height: 100vh;
+
+    background: #f7f9fc;
+
+    color: #17223d;
+
+    font-family:
+        "Inter",
+        "Segoe UI",
+        Arial,
+        sans-serif;
+}
+
+
+/* =========================================================
+   MAIN WRAPPER
+   ========================================================= */
+
+.register-wrapper {
+    min-height: calc(100vh - 52px);
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(420px, 0.95fr)
+        minmax(540px, 1.05fr);
+}
+
+
+/* =========================================================
+   LEFT INFORMATION SECTION
+   ========================================================= */
+
+.register-info-section {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    padding:
+        42px
+        58px
+        44px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f2f7ff 0%,
+            #f8fbff 45%,
+            #eef7ff 100%
+        );
+
+    border-right:
+        1px solid #e1e8f1;
+}
+
+
+/* decorative glow */
+
+.register-info-section::before {
+    content: "";
+
+    position: absolute;
+
+    width: 430px;
+    height: 430px;
+
+    top: -170px;
+    right: -170px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(
+            20,
+            104,
+            243,
+            0.07
+        );
+}
+
+
+.register-info-section::after {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    bottom: -150px;
+    left: -120px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(
+            32,
+            204,
+            169,
+            0.07
+        );
+}
+
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.register-brand {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.resumeiq-wordmark {
+    display: inline-flex;
+
+    align-items: center;
+
+    font-size: 31px;
+
+    font-weight: 800;
+
+    line-height: 1;
+
+    letter-spacing: -1.5px;
+}
+
+
+.resume-word {
+    color: #111b39;
+}
+
+
+.iq-word {
+    color: #126df3;
+}
+
+
+.register-brand p {
+    margin:
+        8px
+        0
+        0;
+
+    color: #7c8da6;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   LEFT CONTENT
+   ========================================================= */
+
+.register-info-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 520px;
+
+    margin:
+        35px
+        0;
+}
+
+
+.register-small-title {
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    color: #126df3;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.3px;
+}
+
+
+.register-info-content h1 {
+    margin:
+        0
+        0
+        18px;
+
+    color: #111b39;
+
+    font-size: 42px;
+
+    line-height: 1.14;
+
+    font-weight: 760;
+
+    letter-spacing: -1.5px;
+}
+
+
+.register-description {
+    max-width: 470px;
+
+    margin:
+        0
+        0
+        32px;
+
+    color: #6f819d;
+
+    font-size: 13px;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   FEATURES
+   ========================================================= */
+
+.register-feature-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+.register-feature {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 14px;
+}
+
+
+.register-feature-icon {
+    width: 43px;
+
+    height: 43px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 11px;
+
+    font-size: 18px;
+}
+
+
+.register-feature-icon.blue {
+    color: #126df3;
+
+    background: #e6f0ff;
+}
+
+
+.register-feature-icon.green {
+    color: #12a986;
+
+    background: #e4f8f2;
+}
+
+
+.register-feature-icon.purple {
+    color: #7658e8;
+
+    background: #f0ebff;
+}
+
+
+.register-feature strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #273956;
+
+    font-size: 12px;
+
+    font-weight: 650;
+}
+
+
+.register-feature p {
+    max-width: 360px;
+
+    margin: 0;
+
+    color: #8391a6;
+
+    font-size: 10px;
+
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   QUOTE
+   ========================================================= */
+
+.register-quote {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+}
+
+
+.register-quote > div {
+    width: 3px;
+
+    height: 42px;
+
+    border-radius: 4px;
+
+    background: #28c9ad;
+}
+
+
+.register-quote p {
+    margin: 0;
+
+    color: #70829b;
+
+    font-size: 11px;
+
+    line-height: 1.55;
+
+    font-style: italic;
+}
+
+
+/* =========================================================
+   RIGHT FORM SECTION
+   ========================================================= */
+
+.register-form-section {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding:
+        34px
+        42px;
+
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   REGISTER CARD
+   ========================================================= */
+
+.register-card {
+    width: 100%;
+
+    max-width: 520px;
+
+    padding:
+        30px
+        36px
+        26px;
+
+    border:
+        1px solid #e2e8f0;
+
+    border-radius: 16px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0
+        15px
+        45px
+        rgba(
+            27,
+            48,
+            78,
+            0.07
+        );
+}
+
+
+.register-card-brand {
+    display: none;
+
+    margin-bottom: 23px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.register-card-heading {
+    margin-bottom: 22px;
+}
+
+
+.register-card-heading h2 {
+    margin:
+        0
+        0
+        7px;
+
+    color: #15223d;
+
+    font-size: 25px;
+
+    font-weight: 720;
+
+    letter-spacing: -0.5px;
+}
+
+
+.register-card-heading p {
+    margin: 0;
+
+    color: #8190a5;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   ALERTS
+   ========================================================= */
+
+.register-card .alert {
+    margin-bottom: 17px;
+
+    padding:
+        10px
+        12px;
+
+    border-radius: 8px;
+
+    font-size: 10.5px;
+
+    line-height: 1.5;
+}
+
+
+.register-card .alert-danger {
+    border:
+        1px solid #f3c7cd;
+
+    background: #fff2f3;
+
+    color: #bd3645;
+}
+
+
+.register-card .alert-success {
+    border:
+        1px solid #bdebdc;
+
+    background: #ecfaf5;
+
+    color: #148163;
+}
+
+
+.register-card .alert-warning {
+    border:
+        1px solid #f5dfa9;
+
+    background: #fff9e9;
+
+    color: #976e16;
+}
+
+
+/* =========================================================
+   FORM FIELD
+   ========================================================= */
+
+.auth-field {
+    margin-bottom: 16px;
+}
+
+
+.auth-field label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #354660;
+
+    font-size: 10.5px;
+
+    font-weight: 600;
+}
+
+
+.auth-input-wrapper {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+}
+
+
+.auth-input-wrapper > i {
+    position: absolute;
+
+    left: 14px;
+
+    z-index: 2;
+
+    color: #93a0b2;
+
+    font-size: 14px;
+}
+
+
+.auth-input-wrapper input {
+    width: 100%;
+
+    height: 44px;
+
+    padding:
+        0
+        43px
+        0
+        40px;
+
+    border:
+        1px solid #dce4ed;
+
+    border-radius: 9px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    color: #253650;
+
+    font-size: 11px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.auth-input-wrapper input::placeholder {
+    color: #a1adbd;
+}
+
+
+.auth-input-wrapper input:focus {
+    border-color: #8db8f4;
+
+    background: #ffffff;
+
+    box-shadow:
+        0
+        0
+        0
+        3px
+        rgba(
+            18,
+            109,
+            243,
+            0.07
+        );
+}
+
+
+/* =========================================================
+   PASSWORD
+   ========================================================= */
+
+.password-toggle {
+    position: absolute;
+
+    right: 10px;
+
+    width: 32px;
+
+    height: 32px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 0;
+
+    border-radius: 7px;
+
+    background: transparent;
+
+    color: #8695aa;
+
+    cursor: pointer;
+}
+
+
+.password-toggle:hover {
+    background: #f3f6fa;
+}
+
+
+.password-help {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #9aa5b4;
+
+    font-size: 8.5px;
+}
+
+
+/* =========================================================
+   ROLE OPTIONS
+   ========================================================= */
+
+.register-role-options {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(
+                0,
+                1fr
+            )
+        );
+
+    gap: 10px;
+}
+
+
+.register-role-card {
+    position: relative;
+
+    margin: 0;
+
+    cursor: pointer;
+}
+
+
+.register-role-card input {
+    position: absolute;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+
+.register-role-content {
+    min-height: 73px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding:
+        11px
+        12px;
+
+    border:
+        1px solid #dfe6ef;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.register-role-card input:checked
++ .register-role-content {
+    border-color: #81b0ef;
+
+    background: #f3f8ff;
+
+    box-shadow:
+        0
+        0
+        0
+        2px
+        rgba(
+            18,
+            109,
+            243,
+            0.05
+        );
+}
+
+
+.register-role-icon {
+    width: 35px;
+
+    height: 35px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 9px;
+
+    font-size: 15px;
+}
+
+
+.register-role-icon.candidate {
+    color: #126df3;
+
+    background: #eaf3ff;
+}
+
+
+.register-role-icon.recruiter {
+    color: #7254e5;
+
+    background: #f0ecff;
+}
+
+
+.register-role-content strong {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #2e405d;
+
+    font-size: 10px;
+}
+
+
+.register-role-content span {
+    display: block;
+
+    color: #8896a9;
+
+    font-size: 7.8px;
+
+    line-height: 1.35;
+}
+
+
+/* =========================================================
+   TERMS
+   ========================================================= */
+
+.register-terms {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 8px;
+
+    margin:
+        2px
+        0
+        18px;
+}
+
+
+.register-terms input {
+    margin-top: 2px;
+
+    accent-color: #126df3;
+}
+
+
+.register-terms label {
+    margin: 0;
+
+    color: #8190a4;
+
+    font-size: 9px;
+
+    line-height: 1.5;
+}
+
+
+.register-terms a {
+    color: #126df3;
+
+    text-decoration: none;
+}
+
+
+.register-terms a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   MAIN BUTTON
+   ========================================================= */
+
+.register-submit-button {
+    width: 100%;
+
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    border: 0;
+
+    border-radius: 9px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #126df3,
+            #347ff3
+        );
+
+    color: #ffffff;
+
+    font-size: 11px;
+
+    font-weight: 650;
+
+    cursor: pointer;
+
+    box-shadow:
+        0
+        8px
+        18px
+        rgba(
+            18,
+            109,
+            243,
+            0.16
+        );
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.register-submit-button:hover:not(:disabled) {
+    transform:
+        translateY(-1px);
+
+    box-shadow:
+        0
+        11px
+        21px
+        rgba(
+            18,
+            109,
+            243,
+            0.21
+        );
+}
+
+
+.register-submit-button:disabled {
+    opacity: 0.65;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================================================
+   LOGIN LINK
+   ========================================================= */
+
+.register-login-link {
+    margin-top: 17px;
+
+    text-align: center;
+
+    color: #8794a7;
+
+    font-size: 9.5px;
+}
+
+
+.register-login-link a {
+    margin-left: 3px;
+
+    color: #126df3;
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+
+.register-login-link a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   SECURITY FOOTER
+   ========================================================= */
+
+.register-security {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 6px;
+
+    margin-top: 22px;
+
+    padding-top: 18px;
+
+    border-top:
+        1px solid #edf1f5;
+
+    color: #97a3b2;
+
+    font-size: 8.5px;
+}
+
+
+.register-security i {
+    color: #36ad8c;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   OTP VERIFICATION
+   ========================================================= */
+
+#otpVerificationStep {
+    padding:
+        15px
+        4px
+        5px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   OTP MAIN ICON
+   ========================================================= */
+
+.otp-main-icon {
+    width: 72px;
+
+    height: 72px;
+
+    margin:
+        3px
+        auto
+        20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #eaf3ff,
+            #f2f8ff
+        );
+
+    color: #126df3;
+
+    font-size: 31px;
+
+    box-shadow:
+        0
+        8px
+        24px
+        rgba(
+            18,
+            109,
+            243,
+            0.08
+        );
+}
+
+
+/* =========================================================
+   OTP HEADING
+   ========================================================= */
+
+.otp-heading {
+    margin-bottom: 24px;
+}
+
+
+.otp-heading h2 {
+    margin:
+        0
+        0
+        8px;
+
+    color: #15223d;
+
+    font-size: 26px;
+
+    font-weight: 720;
+
+    letter-spacing: -0.5px;
+}
+
+
+.otp-heading p {
+    margin:
+        0
+        0
+        5px;
+
+    color: #8190a5;
+
+    font-size: 11px;
+}
+
+
+.otp-heading strong {
+    display: block;
+
+    color: #126df3;
+
+    font-size: 11px;
+
+    font-weight: 650;
+}
+
+
+/* =========================================================
+   OTP INPUTS
+   ========================================================= */
+
+.otp-input-group {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    margin:
+        5px
+        0
+        18px;
+}
+
+
+.otp-input {
+    width: 48px;
+
+    height: 55px;
+
+    padding: 0;
+
+    border:
+        1.5px solid #d8e1ec;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    color: #15223d;
+
+    text-align: center;
+
+    font-size: 21px;
+
+    font-weight: 700;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.otp-input:hover {
+    border-color: #b9cbe2;
+}
+
+
+.otp-input:focus {
+    border-color: #126df3;
+
+    transform:
+        translateY(-1px);
+
+    box-shadow:
+        0
+        0
+        0
+        3px
+        rgba(
+            18,
+            109,
+            243,
+            0.08
+        );
+}
+
+
+/* =========================================================
+   OTP TIMER
+   ========================================================= */
+
+.otp-expiry-text {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    margin-bottom: 18px;
+
+    color: #8391a5;
+
+    font-size: 9.5px;
+}
+
+
+.otp-expiry-text i {
+    color: #126df3;
+
+    font-size: 11px;
+}
+
+
+.otp-expiry-text strong {
+    color: #314661;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   RESEND OTP
+   ========================================================= */
+
+.otp-resend-area {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 5px;
+
+    margin-top: 18px;
+
+    color: #8794a6;
+
+    font-size: 9.5px;
+}
+
+
+.otp-resend-area button {
+    padding: 0;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #126df3;
+
+    font-size: 9.5px;
+
+    font-weight: 650;
+
+    cursor: pointer;
+}
+
+
+.otp-resend-area button:hover:not(:disabled) {
+    text-decoration: underline;
+}
+
+
+.otp-resend-area button:disabled {
+    color: #91a2b7;
+
+    cursor: not-allowed;
+}
+
+
+.otp-resend-countdown {
+    color: #97a4b4;
+
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   CHANGE EMAIL
+   ========================================================= */
+
+.otp-change-email {
+    margin:
+        18px
+        auto
+        0;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 6px;
+
+    padding:
+        8px
+        10px;
+
+    border: 0;
+
+    border-radius: 7px;
+
+    background: transparent;
+
+    color: #708198;
+
+    font-size: 9.5px;
+
+    cursor: pointer;
+}
+
+
+.otp-change-email:hover {
+    background: #f5f8fc;
+
+    color: #126df3;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.register-footer {
+    min-height: 52px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding:
+        0
+        45px;
+
+    border-top:
+        1px solid #e7ecf2;
+
+    background: #ffffff;
+
+    color: #98a3b2;
+
+    font-size: 8.5px;
+}
+
+
+.register-footer > div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+}
+
+
+.register-footer a {
+    color: #8492a6;
+
+    text-decoration: none;
+}
+
+
+.register-footer a:hover {
+    color: #126df3;
+}
+
+
+/* =========================================================
+   BOOTSTRAP D-NONE SAFETY
+   ========================================================= */
+
+.d-none {
+    display: none !important;
+}
+
+
+/* =========================================================
+   RESPONSIVE - SMALL LAPTOP
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .register-wrapper {
+        grid-template-columns:
+            0.9fr
+            1.1fr;
+    }
+
+
+    .register-info-section {
+        padding:
+            38px
+            38px
+            40px;
+    }
+
+
+    .register-info-content h1 {
+        font-size: 36px;
+    }
+
+
+    .register-form-section {
+        padding:
+            30px
+            28px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    .register-wrapper {
+        display: block;
+
+        min-height: auto;
+    }
+
+
+    .register-info-section {
+        display: none;
+    }
+
+
+    .register-form-section {
+        min-height:
+            calc(
+                100vh
+                -
+                52px
+            );
+
+        padding:
+            30px
+            20px;
+    }
+
+
+    .register-card {
+        max-width: 520px;
+    }
+
+
+    .register-card-brand {
+        display: block;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+   ========================================================= */
+
+@media (max-width: 560px) {
+
+    .register-form-section {
+        align-items: flex-start;
+
+        padding:
+            22px
+            14px;
+    }
+
+
+    .register-card {
+        padding:
+            25px
+            18px
+            22px;
+
+        border-radius: 13px;
+    }
+
+
+    .register-role-options {
+        grid-template-columns: 1fr;
+    }
+
+
+    .register-card-heading h2,
+    .otp-heading h2 {
+        font-size: 22px;
+    }
+
+
+    .otp-input-group {
+        gap: 6px;
+    }
+
+
+    .otp-input {
+        width: 42px;
+
+        height: 50px;
+
+        border-radius: 8px;
+
+        font-size: 19px;
+    }
+
+
+    .register-footer {
+        flex-direction: column;
+
+        justify-content: center;
+
+        padding:
+            13px
+            20px;
+    }
+}
+
+
+/* =========================================================
+   EXTRA SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .otp-input-group {
+        gap: 4px;
+    }
+
+
+    .otp-input {
+        width: 37px;
+
+        height: 47px;
+
+        font-size: 17px;
+    }
+
+
+    .register-card {
+        padding:
+            22px
+            14px;
+    }
+}

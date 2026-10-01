@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>ResumeIQ | My Profile</title>
+
+    <!-- Bootstrap -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <!-- Common CSS -->
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <!-- Candidate Common CSS -->
+
+    <link
+        rel="stylesheet"
+        href="../css/candidate.css?v=20260928-profile"
+    >
+
+    <!-- Profile CSS -->
+
+    <link
+        rel="stylesheet"
+        href="../css/profile.css?v=20260928-email-otp"
+    >
+
+</head>
+
+<body
+    class="candidate-dashboard-page"
+    style="visibility: hidden;"
+>
+
+<div class="candidate-layout">
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="candidate-sidebar">
+
+        <div>
+
+            <!-- BRAND -->
+
+            <div class="candidate-brand">
+
+                <div class="resumeiq-wordmark">
+
+                    <span class="resume-word">
+                        Resume
+                    </span>
+
+                    <span class="iq-word">
+                        IQ
+                    </span>
+
+                </div>
+
+                <p>
+                    AI-Powered Resume Intelligence
+                </p>
+
+            </div>
+
+            <!-- MENU -->
+
+            <nav class="candidate-menu">
+
+                <a
+                    href="dashboard.html"
+                    class="candidate-menu-link"
+                >
+
+                    <i class="bi bi-house-door"></i>
+
+                    <span>
+                        Dashboard
+                    </span>
+
+                </a>
+
+                <a
+                    href="resumes.html"
+                    class="candidate-menu-link"
+                >
+
+                    <i class="bi bi-file-earmark-text"></i>
+
+                    <span>
+                        My Resumes
+                    </span>
+
+                </a>
+
+                <a
+                    href="resume.html"
+                    class="candidate-menu-link"
+                >
+
+                    <i class="bi bi-upload"></i>
+
+                    <span>
+                        Upload Resume
+                    </span>
+
+                </a>
+
+                <a
+                    href="analysis.html"
+                    class="candidate-menu-link"
+                >
+
+                    <i class="bi bi-bar-chart"></i>
+
+                    <span>
+                        Analysis
+                    </span>
+
+                </a>
+
+                <a
+                    href="jobs.html"
+                    class="candidate-menu-link"
+                >
+
+                    <i class="bi bi-briefcase"></i>
+
+                    <span>
+                        Job Match
+                    </span>
+
+                </a>
+
+                <a
+                    href="#"
+                    class="candidate-menu-link"
+                >
+
+                    <i class="bi bi-bullseye"></i>
+
+                    <span>
+                        Skill Gap
+                    </span>
+
+                </a>
+
+                <a
+                    href="recommendations.html"
+                    class="candidate-menu-link"
+                >
+
+                    <i class="bi bi-lightbulb"></i>
+
+                    <span>
+                        Recommendations
+                    </span>
+
+                </a>
+
+                <a
+                    href="settings.html"
+                    class="candidate-menu-link"
+                >
+
+                    <i class="bi bi-gear"></i>
+
+                    <span>
+                        Settings
+                    </span>
+
+                </a>
+
+            </nav>
+
+        </div>
+
+        <!-- SIDEBAR BOTTOM -->
+
+        <div class="candidate-sidebar-bottom">
+
+            <div class="candidate-career-box">
+
+                <div class="career-icon">
+
+                    <i class="bi bi-rocket-takeoff-fill"></i>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        Build a Smarter
+                        <br>
+                        Career with AI
+                    </strong>
+
+                    <p>
+                        Better insights.
+                        Brighter opportunities.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="candidate-sidebar-footer">
+
+                <p>
+                    © 2026 ResumeIQ
+                </p>
+
+                <span>
+                    Your Skills. A Smarter Tomorrow.
+                </span>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="candidate-main">
+
+        <!-- =================================================
+             TOPBAR
+        ================================================== -->
+
+        <header class="candidate-topbar">
+
+            <!-- SEARCH -->
+
+            <div class="candidate-search">
+
+                <i class="bi bi-search"></i>
+
+                <input
+                    type="text"
+                    placeholder="Search jobs, skills, or resume insights..."
+                >
+
+            </div>
+
+            <!-- RIGHT -->
+
+            <div class="candidate-topbar-right">
+
+                <!-- NOTIFICATION -->
+
+                <button
+                    type="button"
+                    class="candidate-notification"
+                    aria-label="Notifications"
+                >
+
+                    <i class="bi bi-bell"></i>
+
+                    <span></span>
+
+                </button>
+
+                <!-- PROFILE WRAPPER -->
+
+                <div class="candidate-profile-wrapper">
+
+                    <button
+                        type="button"
+                        class="candidate-profile candidate-profile-trigger"
+                        id="candidateProfileTrigger"
+                        aria-expanded="false"
+                    >
+
+                        <div
+                            class="candidate-avatar"
+                            data-candidate-avatar
+                        >
+                            C
+                        </div>
+
+                        <div class="candidate-profile-info">
+
+                            <strong data-candidate-name>
+                                Candidate
+                            </strong>
+
+                            <span data-candidate-role>
+                                Candidate
+                            </span>
+
+                        </div>
+
+                        <i
+                            class="bi bi-chevron-down candidate-profile-chevron"
+                            id="candidateProfileChevron"
+                        ></i>
+
+                    </button>
+
+                    <!-- PROFILE DROPDOWN -->
+
+                    <div
+                        class="candidate-profile-dropdown"
+                        id="candidateProfileDropdown"
+                    >
+
+                        <div class="candidate-dropdown-user">
+
+                            <div
+                                class="candidate-dropdown-avatar"
+                                data-candidate-avatar
+                            >
+                                C
+                            </div>
+
+                            <div class="candidate-dropdown-user-info">
+
+                                <strong data-candidate-name>
+                                    Candidate
+                                </strong>
+
+                                <span data-candidate-email>
+                                    candidate@email.com
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="candidate-dropdown-divider"></div>
+
+                        <!-- PROFILE -->
+
+                        <a
+                            href="profile.html"
+                            class="candidate-dropdown-item"
+                        >
+
+                            <span class="candidate-dropdown-icon profile">
+
+                                <i class="bi bi-person"></i>
+
+                            </span>
+
+                            <div class="candidate-dropdown-item-copy">
+
+                                <strong>
+                                    Profile
+                                </strong>
+
+                                <small>
+                                    View your account
+                                </small>
+
+                            </div>
+
+                            <i class="bi bi-chevron-right candidate-dropdown-arrow"></i>
+
+                        </a>
+
+                        <!-- SETTINGS -->
+
+                        <a
+                            href="settings.html"
+                            class="candidate-dropdown-item"
+                        >
+
+                            <span class="candidate-dropdown-icon settings">
+
+                                <i class="bi bi-gear"></i>
+
+                            </span>
+
+                            <div class="candidate-dropdown-item-copy">
+
+                                <strong>
+                                    Settings
+                                </strong>
+
+                                <small>
+                                    Manage your account
+                                </small>
+
+                            </div>
+
+                            <i class="bi bi-chevron-right candidate-dropdown-arrow"></i>
+
+                        </a>
+
+                        <!-- LOGOUT -->
+
+                        <button
+                            type="button"
+                            class="candidate-dropdown-item candidate-logout-item"
+                            id="candidateLogoutButton"
+                        >
+
+                            <span class="candidate-dropdown-icon logout">
+
+                                <i class="bi bi-box-arrow-right"></i>
+
+                            </span>
+
+                            <div class="candidate-dropdown-item-copy">
+
+                                <strong>
+                                    Logout
+                                </strong>
+
+                                <small>
+                                    Sign out of ResumeIQ
+                                </small>
+
+                            </div>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- =================================================
+             PROFILE CONTENT
+        ================================================== -->
+
+        <section class="candidate-content profile-page">
+
+            <!-- PAGE HEADING -->
+
+            <div class="profile-page-heading">
+
+                <div>
+
+                    <p>
+                        My Account
+                    </p>
+
+                    <h1>
+                        Profile
+                    </h1>
+
+                    <span>
+                        View your personal information and ResumeIQ activity.
+                    </span>
+
+                </div>
+
+                <a
+                    href="settings.html"
+                    class="profile-settings-button"
+                >
+
+                    <i class="bi bi-gear"></i>
+
+                    Account Settings
+
+                </a>
+
+            </div>
+
+            <!-- =================================================
+                 PROFILE HERO
+            ================================================== -->
+
+            <div class="profile-hero-card">
+
+                <div class="profile-cover">
+
+                    <div class="profile-cover-circle one"></div>
+
+                    <div class="profile-cover-circle two"></div>
+
+                </div>
+
+                <div class="profile-hero-content">
+
+                    <div class="profile-avatar-wrapper">
+
+                        <div
+                            class="profile-large-avatar"
+                            id="profileLargeAvatar"
+                        >
+                            C
+                        </div>
+
+                        <span
+                            class="profile-online-dot"
+                            id="profileStatusDot"
+                        ></span>
+
+                    </div>
+
+                    <div class="profile-hero-copy">
+
+                        <div class="profile-name-row">
+
+                            <h2 id="profileFullName">
+                                Candidate
+                            </h2>
+
+                            <span
+                                class="profile-verified-badge"
+                                id="profileVerifiedBadge"
+                            >
+
+                                <i class="bi bi-patch-check-fill"></i>
+
+                                Verified
+
+                            </span>
+
+                        </div>
+
+                        <p id="profileHeroEmail">
+                            candidate@email.com
+                        </p>
+
+                        <span id="profileHeroRole">
+                            Candidate
+                        </span>
+
+                    </div>
+
+                    <div class="profile-account-status">
+
+                        <span>
+                            Account Status
+                        </span>
+
+                        <strong id="profileAccountStatus">
+
+                            <i class="bi bi-check-circle-fill"></i>
+
+                            Active
+
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- =================================================
+                 STATS
+            ================================================== -->
+
+            <div class="profile-stat-grid">
+
+                <!-- RESUMES -->
+
+                <div class="profile-stat-card">
+
+                    <span class="profile-stat-icon blue">
+
+                        <i class="bi bi-file-earmark-text"></i>
+
+                    </span>
+
+                    <div>
+
+                        <small>
+                            Total Resumes
+                        </small>
+
+                        <strong id="profileResumeCount">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+                <!-- SCORE -->
+
+                <div class="profile-stat-card">
+
+                    <span class="profile-stat-icon green">
+
+                        <i class="bi bi-bar-chart-fill"></i>
+
+                    </span>
+
+                    <div>
+
+                        <small>
+                            Resume Score
+                        </small>
+
+                        <strong id="profileResumeScore">
+                            --
+                        </strong>
+
+                    </div>
+
+                </div>
+
+                <!-- SKILLS -->
+
+                <div class="profile-stat-card">
+
+                    <span class="profile-stat-icon purple">
+
+                        <i class="bi bi-layers"></i>
+
+                    </span>
+
+                    <div>
+
+                        <small>
+                            Extracted Skills
+                        </small>
+
+                        <strong id="profileSkillCount">
+                            --
+                        </strong>
+
+                    </div>
+
+                </div>
+
+                <!-- ROLE -->
+
+                <div class="profile-stat-card">
+
+                    <span class="profile-stat-icon blue">
+
+                        <i class="bi bi-person-badge"></i>
+
+                    </span>
+
+                    <div>
+
+                        <small>
+                            Account Role
+                        </small>
+
+                        <strong id="profileStatRole">
+                            Candidate
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- =================================================
+                 PROFILE MAIN GRID
+            ================================================== -->
+
+            <div class="profile-content-grid">
+
+                <!-- =================================================
+                     PERSONAL INFORMATION
+                ================================================== -->
+
+                <div class="profile-card">
+
+                    <div class="profile-card-header">
+
+                        <div>
+
+                            <i class="bi bi-person"></i>
+
+                            <strong>
+                                Personal Information
+                            </strong>
+
+                        </div>
+
+                        <!-- NEW EDIT PROFILE BUTTON -->
+
+                        <button
+                            type="button"
+                            class="profile-edit-button"
+                            id="editProfileButton"
+                        >
+
+                            <i class="bi bi-pencil-square"></i>
+
+                            Edit Profile
+
+                        </button>
+
+                    </div>
+
+                    <div class="profile-info-grid">
+
+                        <!-- NAME -->
+
+                        <div class="profile-info-item">
+
+                            <span class="profile-info-icon">
+
+                                <i class="bi bi-person"></i>
+
+                            </span>
+
+                            <div>
+
+                                <label>
+                                    Full Name
+                                </label>
+
+                                <strong id="profileName">
+                                    --
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                        <!-- EMAIL -->
+
+                        <div class="profile-info-item">
+
+                            <span class="profile-info-icon">
+
+                                <i class="bi bi-envelope"></i>
+
+                            </span>
+
+                            <div>
+
+                                <label>
+                                    Email Address
+                                </label>
+
+                                <strong id="profileEmail">
+                                    --
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                        <!-- MOBILE -->
+
+                        <div class="profile-info-item">
+
+                            <span class="profile-info-icon">
+
+                                <i class="bi bi-phone"></i>
+
+                            </span>
+
+                            <div>
+
+                                <label>
+                                    Mobile Number
+                                </label>
+
+                                <strong id="profileMobile">
+                                    --
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                        <!-- ROLE -->
+
+                        <div class="profile-info-item">
+
+                            <span class="profile-info-icon">
+
+                                <i class="bi bi-person-badge"></i>
+
+                            </span>
+
+                            <div>
+
+                                <label>
+                                    Account Role
+                                </label>
+
+                                <strong id="profileRole">
+                                    Candidate
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                        <!-- VERIFICATION -->
+
+                        <div class="profile-info-item">
+
+                            <span class="profile-info-icon">
+
+                                <i class="bi bi-shield-check"></i>
+
+                            </span>
+
+                            <div>
+
+                                <label>
+                                    Email Verification
+                                </label>
+
+                                <strong
+                                    id="profileVerification"
+                                    class="profile-status-value"
+                                >
+                                    --
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                        <!-- MEMBER SINCE -->
+
+                        <div class="profile-info-item">
+
+                            <span class="profile-info-icon">
+
+                                <i class="bi bi-calendar3"></i>
+
+                            </span>
+
+                            <div>
+
+                                <label>
+                                    Member Since
+                                </label>
+
+                                <strong id="profileMemberSince">
+                                    --
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- =================================================
+                     ACCOUNT OVERVIEW
+                ================================================== -->
+
+                <div class="profile-card">
+
+                    <div class="profile-card-header">
+
+                        <div>
+
+                            <i class="bi bi-shield-check"></i>
+
+                            <strong>
+                                Account Overview
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                    <div class="profile-overview-list">
+
+                        <!-- EMAIL VERIFIED -->
+
+                        <div class="profile-overview-row">
+
+                            <div>
+
+                                <span class="profile-overview-icon green">
+
+                                    <i class="bi bi-envelope-check"></i>
+
+                                </span>
+
+                                <div>
+
+                                    <strong>
+                                        Email Verification
+                                    </strong>
+
+                                    <p>
+                                        Your account email status
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <span
+                                class="profile-overview-status"
+                                id="profileOverviewVerification"
+                            >
+                                --
+                            </span>
+
+                        </div>
+
+                        <!-- RESUME -->
+
+                        <div class="profile-overview-row">
+
+                            <div>
+
+                                <span class="profile-overview-icon blue">
+
+                                    <i class="bi bi-file-earmark-check"></i>
+
+                                </span>
+
+                                <div>
+
+                                    <strong>
+                                        Resume Profile
+                                    </strong>
+
+                                    <p id="profileResumeStatusText">
+                                        No resume uploaded
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <i class="bi bi-chevron-right"></i>
+
+                        </div>
+
+                        <!-- ANALYSIS -->
+
+                        <div class="profile-overview-row">
+
+                            <div>
+
+                                <span class="profile-overview-icon purple">
+
+                                    <i class="bi bi-bar-chart"></i>
+
+                                </span>
+
+                                <div>
+
+                                    <strong>
+                                        Resume Analysis
+                                    </strong>
+
+                                    <p id="profileAnalysisStatusText">
+                                        Analysis not available
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <i class="bi bi-chevron-right"></i>
+
+                        </div>
+
+                        <!-- SECURITY -->
+
+                        <div class="profile-overview-row">
+
+                            <div>
+
+                                <span class="profile-overview-icon orange">
+
+                                    <i class="bi bi-lock"></i>
+
+                                </span>
+
+                                <div>
+
+                                    <strong>
+                                        Account Security
+                                    </strong>
+
+                                    <p>
+                                        Password protected account
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <a href="settings.html">
+                                Settings
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<!-- =====================================================
+     EDIT PROFILE MODAL
+====================================================== -->
+
+<div
+    class="profile-edit-modal"
+    id="profileEditModal"
+    aria-hidden="true"
+>
+
+    <!-- BACKDROP -->
+
+    <div
+        class="profile-edit-modal-backdrop"
+        data-profile-modal-close
+    ></div>
+
+    <!-- DIALOG -->
+
+    <div
+        class="profile-edit-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="profileEditTitle"
+    >
+
+        <!-- HEADER -->
+
+        <div class="profile-edit-dialog-header">
+
+            <div>
+
+                <span class="profile-edit-dialog-icon">
+
+                    <i class="bi bi-person-gear"></i>
+
+                </span>
+
+                <div>
+
+                    <h2 id="profileEditTitle">
+                        Edit Profile
+                    </h2>
+
+                    <p>
+                        Update your personal information.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <button
+                type="button"
+                class="profile-edit-close"
+                id="profileEditCloseButton"
+                aria-label="Close edit profile"
+            >
+
+                <i class="bi bi-x-lg"></i>
+
+            </button>
+
+        </div>
+
+        <!-- FORM -->
+
+        <form
+            id="profileEditForm"
+            class="profile-edit-form"
+            novalidate
+        >
+
+            <!-- FULL NAME -->
+
+            <div class="profile-edit-field">
+
+                <label for="editProfileFullName">
+                    Full Name
+                </label>
+
+                <div class="profile-edit-input-wrap">
+
+                    <i class="bi bi-person"></i>
+
+                    <input
+                        type="text"
+                        id="editProfileFullName"
+                        name="full_name"
+                        minlength="2"
+                        maxlength="100"
+                        autocomplete="name"
+                        placeholder="Enter your full name"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+            <!-- EMAIL CHANGE WITH OTP -->
+
+            <div class="profile-edit-field profile-email-change-field">
+
+                <label for="editProfileEmail">
+                    Email Address
+                </label>
+
+                <div class="profile-email-change-row">
+
+                    <div class="profile-edit-input-wrap profile-email-input-wrap">
+
+                        <i class="bi bi-envelope"></i>
+
+                        <input
+                            type="email"
+                            id="editProfileEmail"
+                            name="email"
+                            maxlength="254"
+                            autocomplete="email"
+                            placeholder="Enter new email address"
+                        >
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="profile-email-send-button"
+                        id="sendEmailChangeOtpButton"
+                    >
+
+                        <i class="bi bi-send"></i>
+
+                        <span>
+                            Send OTP
+                        </span>
+
+                    </button>
+
+                </div>
+
+                <small id="editProfileEmailHelp">
+                    Change your email securely. A 6-digit OTP will be sent to the new email address.
+                </small>
+
+                <div
+                    class="profile-email-otp-section"
+                    id="emailChangeOtpSection"
+                    hidden
+                >
+
+                    <div class="profile-email-otp-heading">
+
+                        <div>
+
+                            <i class="bi bi-shield-check"></i>
+
+                            <span>
+                                Verify New Email
+                            </span>
+
+                        </div>
+
+                        <span class="profile-email-otp-badge">
+                            OTP Required
+                        </span>
+
+                    </div>
+
+                    <div class="profile-email-otp-row">
+
+                        <div class="profile-edit-input-wrap profile-email-otp-input-wrap">
+
+                            <i class="bi bi-key"></i>
+
+                            <input
+                                type="text"
+                                id="editProfileEmailOtp"
+                                inputmode="numeric"
+                                autocomplete="one-time-code"
+                                maxlength="6"
+                                placeholder="Enter 6-digit OTP"
+                            >
+
+                        </div>
+
+                        <button
+                            type="button"
+                            class="profile-email-verify-button"
+                            id="verifyEmailChangeOtpButton"
+                        >
+
+                            <i class="bi bi-patch-check"></i>
+
+                            <span>
+                                Verify Email
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                    <div class="profile-email-otp-footer">
+
+                        <small id="emailChangeOtpHint">
+                            OTP is valid for 5 minutes.
+                        </small>
+
+                        <button
+                            type="button"
+                            class="profile-email-resend-button"
+                            id="resendEmailChangeOtpButton"
+                        >
+                            Resend OTP
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- MOBILE -->
+
+            <div class="profile-edit-field">
+
+                <label for="editProfileMobile">
+                    Mobile Number
+                </label>
+
+                <div class="profile-edit-input-wrap">
+
+                    <i class="bi bi-phone"></i>
+
+                    <input
+                        type="tel"
+                        id="editProfileMobile"
+                        name="mobile"
+                        maxlength="20"
+                        autocomplete="tel"
+                        placeholder="Enter mobile number"
+                    >
+
+                </div>
+
+                <small>
+                    You can use digits, +, -, spaces and parentheses.
+                </small>
+
+            </div>
+
+            <!-- MESSAGE -->
+
+            <div
+                class="profile-edit-message"
+                id="profileEditMessage"
+                role="alert"
+                aria-live="polite"
+            ></div>
+
+            <!-- BUTTONS -->
+
+            <div class="profile-edit-actions">
+
+                <button
+                    type="button"
+                    class="profile-edit-cancel"
+                    id="profileEditCancelButton"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    type="submit"
+                    class="profile-edit-save"
+                    id="profileEditSaveButton"
+                >
+
+                    <i class="bi bi-check2-circle"></i>
+
+                    <span>
+                        Save Changes
+                    </span>
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+<!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script src="../js/auth.js"></script>
+
+<script src="../js/profile.js?v=20260928-email-otp"></script>
+
+</body>
+
+</html>

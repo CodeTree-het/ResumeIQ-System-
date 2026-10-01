@@ -1,0 +1,272 @@
+<!-- =========================================================
+     RESUMEIQ CHATBOT COMPONENT
+========================================================= -->
+
+<div
+    id="resumeiqChatbotComponent"
+    class="resumeiq-chatbot-component"
+>
+
+    <!-- =====================================================
+         FLOATING ROBOT BUTTON
+    ====================================================== -->
+
+    <button
+        id="resumeiqChatbotButton"
+        class="resumeiq-chatbot-button"
+        type="button"
+        aria-label="Open ResumeIQ Assistant"
+        title="ResumeIQ Assistant"
+    >
+
+        <div
+            class="resumeiq-robot-face"
+        >
+
+            <div
+                class="resumeiq-robot-eyes"
+            >
+
+                <span
+                    class="resumeiq-robot-eye"
+                ></span>
+
+                <span
+                    class="resumeiq-robot-eye"
+                ></span>
+
+            </div>
+
+            <div
+                class="resumeiq-robot-mouth"
+            ></div>
+
+        </div>
+
+        <span
+            class="resumeiq-chatbot-dot"
+        ></span>
+
+    </button>
+
+
+    <!-- =====================================================
+         CHAT WINDOW
+    ====================================================== -->
+
+    <div
+        id="resumeiqChatbotWindow"
+        class="resumeiq-chatbot-window"
+    >
+
+        <!-- =================================================
+             HEADER
+        ================================================== -->
+
+        <div
+            class="resumeiq-chatbot-header"
+        >
+
+            <div
+                class="resumeiq-chatbot-header-left"
+            >
+
+                <div
+                    class="resumeiq-chatbot-header-avatar"
+                >
+
+                    <div
+                        class="resumeiq-robot-face"
+                    >
+
+                        <div
+                            class="resumeiq-robot-eyes"
+                        >
+
+                            <span
+                                class="resumeiq-robot-eye"
+                            ></span>
+
+                            <span
+                                class="resumeiq-robot-eye"
+                            ></span>
+
+                        </div>
+
+                        <div
+                            class="resumeiq-robot-mouth"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+
+                <div>
+
+                    <p
+                        class="resumeiq-chatbot-title"
+                    >
+                        ResumeIQ Assistant
+                    </p>
+
+
+                    <div
+                        class="resumeiq-chatbot-status"
+                    >
+                        Online · ResumeIQ Help
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <button
+                id="resumeiqChatbotClose"
+                class="resumeiq-chatbot-close"
+                type="button"
+                aria-label="Close ResumeIQ Assistant"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <!-- =================================================
+             CHAT BODY
+        ================================================== -->
+
+        <div
+            id="resumeiqChatbotBody"
+            class="resumeiq-chatbot-body"
+        >
+
+            <!-- Initial welcome message -->
+
+            <div
+                class="resumeiq-chat-message bot"
+            >
+
+                <div
+                    class="resumeiq-chat-bubble"
+                >
+
+                    <div
+                        class="resumeiq-chat-bot-label"
+                    >
+                        ResumeIQ Assistant
+                    </div>
+
+                    Hi 👋 I’m the ResumeIQ Assistant.
+
+                    <br><br>
+
+                    I can help you with:
+
+                    <br>• Resume upload problems
+                    <br>• Resume analysis
+                    <br>• ATS score
+                    <br>• Job role prediction
+                    <br>• Skills and recommendations
+                    <br>• Settings problems
+                    <br>• Login and password issues
+                    <br>• ResumeIQ navigation
+
+
+                    <!-- Quick buttons -->
+
+                    <div
+                        class="resumeiq-chatbot-quick-actions"
+                    >
+
+                        <button
+                            class="resumeiq-chatbot-quick-button"
+                            type="button"
+                            data-chatbot-question="Resume upload problem"
+                        >
+                            Upload Problem
+                        </button>
+
+
+                        <button
+                            class="resumeiq-chatbot-quick-button"
+                            type="button"
+                            data-chatbot-question="Explain my ATS score"
+                        >
+                            ATS Score
+                        </button>
+
+
+                        <button
+                            class="resumeiq-chatbot-quick-button"
+                            type="button"
+                            data-chatbot-question="Analysis page problem"
+                        >
+                            Analysis Help
+                        </button>
+
+
+                        <button
+                            class="resumeiq-chatbot-quick-button"
+                            type="button"
+                            data-chatbot-question="Settings are not saving"
+                        >
+                            Settings Help
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             FOOTER / INPUT
+        ================================================== -->
+
+        <div
+            class="resumeiq-chatbot-footer"
+        >
+
+            <div
+                class="resumeiq-chatbot-input-wrapper"
+            >
+
+                <textarea
+                    id="resumeiqChatbotInput"
+                    class="resumeiq-chatbot-input"
+                    rows="1"
+                    maxlength="1000"
+                    placeholder="Ask anything about ResumeIQ..."
+                    aria-label="Ask ResumeIQ Assistant"
+                ></textarea>
+
+
+                <button
+                    id="resumeiqChatbotSend"
+                    class="resumeiq-chatbot-send"
+                    type="button"
+                    aria-label="Send message"
+                >
+                    ➤
+                </button>
+
+            </div>
+
+
+            <div
+                class="resumeiq-chatbot-footer-note"
+            >
+                ResumeIQ Help Assistant
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

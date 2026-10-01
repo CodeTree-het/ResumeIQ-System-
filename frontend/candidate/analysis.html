@@ -1,0 +1,1549 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>ResumeIQ | Resume Analysis</title>
+
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+
+    <!-- Common CSS -->
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+
+    <!-- Candidate CSS -->
+    <link
+        rel="stylesheet"
+        href="../css/candidate.css"
+    >
+
+
+    <!-- Analysis CSS -->
+    <link
+        rel="stylesheet"
+        href="../css/analysis.css"
+    >
+
+
+    <!-- PROFILE DROPDOWN CSS -->
+    <style>
+
+        .candidate-profile {
+            position: relative;
+            cursor: pointer;
+            user-select: none;
+        }
+
+
+        .candidate-profile-menu {
+            position: absolute;
+            top: calc(100% + 12px);
+            right: 0;
+            width: 210px;
+
+            padding: 8px;
+
+            background: #ffffff;
+
+            border: 1px solid #e8edf5;
+            border-radius: 14px;
+
+            box-shadow:
+                0 14px 34px
+                rgba(15, 23, 42, 0.14);
+
+            z-index: 1100;
+
+            display: none;
+        }
+
+
+        .candidate-profile-menu.show {
+            display: block;
+        }
+
+
+        .candidate-profile-menu::before {
+
+            content: "";
+
+            position: absolute;
+
+            top: -7px;
+            right: 20px;
+
+            width: 14px;
+            height: 14px;
+
+            background: #ffffff;
+
+            border-left:
+                1px solid #e8edf5;
+
+            border-top:
+                1px solid #e8edf5;
+
+            transform:
+                rotate(45deg);
+        }
+
+
+        .candidate-profile-menu a,
+        .candidate-profile-menu button {
+
+            width: 100%;
+
+            border: 0;
+
+            background:
+                transparent;
+
+            color:
+                #27364b;
+
+            text-decoration:
+                none;
+
+            display: flex;
+
+            align-items:
+                center;
+
+            gap: 11px;
+
+            padding:
+                10px 12px;
+
+            border-radius:
+                10px;
+
+            font-size:
+                14px;
+
+            font-weight:
+                500;
+
+            text-align:
+                left;
+
+            transition:
+                background 0.18s ease,
+                color 0.18s ease;
+        }
+
+
+        .candidate-profile-menu a:hover,
+        .candidate-profile-menu button:hover {
+
+            background:
+                #f4f7fb;
+
+            color:
+                #246bfd;
+        }
+
+
+        .candidate-profile-menu
+        .profile-menu-divider {
+
+            height: 1px;
+
+            background:
+                #edf1f6;
+
+            margin:
+                6px 4px;
+        }
+
+
+        .candidate-profile-menu
+        .logout-item {
+
+            color:
+                #dc3545;
+        }
+
+
+        .candidate-profile-menu
+        .logout-item:hover {
+
+            background:
+                #fff2f3;
+
+            color:
+                #dc3545;
+        }
+
+
+        .candidate-profile-chevron {
+
+            transition:
+                transform
+                0.2s ease;
+        }
+
+
+        .candidate-profile.menu-open
+        .candidate-profile-chevron {
+
+            transform:
+                rotate(180deg);
+        }
+
+    </style>
+
+</head>
+
+
+<body
+    class="candidate-dashboard-page"
+    style="visibility: hidden;"
+>
+
+
+<div class="candidate-layout">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="candidate-sidebar">
+
+        <div>
+
+            <div class="candidate-brand">
+
+                <div class="resumeiq-wordmark">
+
+                    <span class="resume-word">
+                        Resume
+                    </span>
+
+                    <span class="iq-word">
+                        IQ
+                    </span>
+
+                </div>
+
+                <p>
+                    AI-Powered Resume Intelligence
+                </p>
+
+            </div>
+
+
+            <nav class="candidate-menu">
+
+                <a
+                    href="dashboard.html"
+                    class="candidate-menu-link"
+                >
+
+                    <i class="bi bi-house-door"></i>
+
+                    <span>
+                        Dashboard
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="resumes.html"
+                    class="candidate-menu-link"
+                >
+
+                    <i class="bi bi-file-earmark-text"></i>
+
+                    <span>
+                        My Resumes
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="resume.html"
+                    class="candidate-menu-link"
+                >
+
+                    <i class="bi bi-cloud-arrow-up"></i>
+
+                    <span>
+                        Upload Resume
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="analysis.html"
+                    class="candidate-menu-link active"
+                >
+
+                    <i class="bi bi-bar-chart"></i>
+
+                    <span>
+                        Analysis
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="jobs.html"
+                    class="candidate-menu-link"
+                >
+
+                    <i class="bi bi-briefcase"></i>
+
+                    <span>
+                        Job Match
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="#"
+                    class="candidate-menu-link"
+                >
+
+                    <i class="bi bi-bullseye"></i>
+
+                    <span>
+                        Skill Gap
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="recommendations.html"
+                    class="candidate-menu-link"
+                >
+
+                    <i class="bi bi-lightbulb"></i>
+
+                    <span>
+                        Recommendations
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="#"
+                    class="candidate-menu-link"
+                >
+
+                    <i class="bi bi-gear"></i>
+
+                    <span>
+                        Settings
+                    </span>
+
+                </a>
+
+            </nav>
+
+        </div>
+
+
+        <div class="candidate-sidebar-bottom">
+
+            <div class="candidate-career-box">
+
+                <div class="career-icon">
+                    🚀
+                </div>
+
+                <div>
+
+                    <strong>
+                        Build a Smarter Career with AI
+                    </strong>
+
+                    <p>
+                        Better insights. Brighter opportunities.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="candidate-sidebar-footer">
+                © 2026 ResumeIQ
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="candidate-main">
+
+
+        <!-- TOP BAR -->
+
+        <header class="candidate-topbar">
+
+
+            <div class="candidate-search">
+
+                <i class="bi bi-search"></i>
+
+                <input
+                    type="text"
+                    placeholder="Search jobs, skills, or resume insights..."
+                >
+
+            </div>
+
+
+
+            <!-- PROFILE -->
+
+            <div class="candidate-profile">
+
+
+                <button
+                    type="button"
+                    class="candidate-notification"
+                >
+
+                    <i class="bi bi-bell"></i>
+
+                    <span></span>
+
+                </button>
+
+
+
+                <div
+                    class="candidate-avatar"
+                    data-candidate-avatar
+                >
+
+                    C
+
+                </div>
+
+
+
+                <div class="candidate-profile-info">
+
+                    <strong data-candidate-name>
+                        Candidate
+                    </strong>
+
+                    <span data-candidate-role>
+                        Candidate
+                    </span>
+
+                </div>
+
+
+
+                <i
+                    class="bi bi-chevron-down candidate-profile-chevron"
+                ></i>
+
+
+
+                <!-- PROFILE DROPDOWN -->
+
+                <div
+                    id="candidateProfileMenu"
+                    class="candidate-profile-menu"
+                    aria-hidden="true"
+                >
+
+
+                    <a href="profile.html">
+
+                        <i class="bi bi-person"></i>
+
+                        <span>
+                            Profile
+                        </span>
+
+                    </a>
+
+
+                    <a href="settings.html">
+
+                        <i class="bi bi-gear"></i>
+
+                        <span>
+                            Settings
+                        </span>
+
+                    </a>
+
+
+                    <div
+                        class="profile-menu-divider"
+                    ></div>
+
+
+                    <button
+                        type="button"
+                        id="candidateLogoutButton"
+                        class="logout-item"
+                    >
+
+                        <i
+                            class="bi bi-box-arrow-right"
+                        ></i>
+
+                        <span>
+                            Logout
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =====================================================
+             PAGE CONTENT
+        ====================================================== -->
+
+        <section
+            class="candidate-content analysis-page"
+        >
+
+
+            <!-- PAGE HEADING -->
+
+            <div class="analysis-page-heading">
+
+                <div>
+
+                    <p class="analysis-welcome">
+                        Welcome back,
+                    </p>
+
+
+                    <h1>
+                        Resume Analysis
+                    </h1>
+
+
+                    <p class="analysis-subtitle">
+
+                        Get a detailed analysis of your resume with AI-powered insights.
+
+                    </p>
+
+                </div>
+
+
+                <div class="analysis-quote">
+
+                    <span></span>
+
+                    <p>
+
+                        “Understand your resume today.
+                        Unlock a brighter tomorrow.”
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =====================================================
+                 LOADING
+            ====================================================== -->
+
+            <div
+                id="analysisLoadingState"
+                class="analysis-loading"
+            >
+
+                <div
+                    class="spinner-border text-primary"
+                    role="status"
+                ></div>
+
+
+                <div>
+
+                    <strong>
+                        Loading your resume analysis...
+                    </strong>
+
+                    <p>
+                        ResumeIQ is retrieving your latest analysis.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =====================================================
+                 EMPTY
+            ====================================================== -->
+
+            <div
+                id="analysisEmptyState"
+                class="analysis-empty-state"
+                style="display: none;"
+            >
+
+                <div class="analysis-empty-icon">
+
+                    <i
+                        class="bi bi-file-earmark-bar-graph"
+                    ></i>
+
+                </div>
+
+
+                <h2>
+                    No Resume Analysis Found
+                </h2>
+
+
+                <p>
+
+                    Upload and analyse your resume first to view your insights.
+
+                </p>
+
+
+                <a
+                    href="resume.html"
+                    class="analysis-upload-button"
+                >
+
+                    Upload Resume
+
+                </a>
+
+            </div>
+
+
+
+            <!-- =====================================================
+                 ANALYSIS CONTENT
+            ====================================================== -->
+
+            <div
+                id="analysisContent"
+                style="display: none;"
+            >
+
+
+                <!-- =================================================
+                     TOP FOUR CARDS
+                ================================================== -->
+
+                <div class="analysis-stat-grid">
+
+
+                    <!-- RESUME SCORE -->
+
+                    <div class="analysis-stat-card">
+
+                        <div
+                            class="analysis-stat-icon green"
+                        >
+
+                            <i
+                                class="bi bi-bar-chart-fill"
+                            ></i>
+
+                        </div>
+
+
+                        <div
+                            class="analysis-stat-content"
+                        >
+
+                            <span
+                                class="analysis-stat-title"
+                            >
+
+                                Resume Score
+
+                            </span>
+
+
+                            <div
+                                class="analysis-stat-number"
+                            >
+
+                                <strong
+                                    id="resumeScoreValue"
+                                >
+
+                                    --
+
+                                </strong>
+
+                                <small>
+                                    / 100
+                                </small>
+
+                            </div>
+
+
+                            <p>
+                                Great progress! Keep going.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ATS READINESS -->
+
+                    <div class="analysis-stat-card">
+
+                        <div
+                            class="analysis-stat-icon blue"
+                        >
+
+                            <i
+                                class="bi bi-bullseye"
+                            ></i>
+
+                        </div>
+
+
+                        <div
+                            class="analysis-stat-content"
+                        >
+
+                            <span
+                                class="analysis-stat-title"
+                            >
+
+                                ATS Readiness
+
+                            </span>
+
+
+                            <div
+                                class="analysis-stat-number"
+                            >
+
+                                <strong
+                                    id="atsReadinessValue"
+                                >
+
+                                    --
+
+                                </strong>
+
+                                <small>
+                                    %
+                                </small>
+
+                            </div>
+
+
+                            <p>
+                                Well-optimized for ATS systems.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- SKILLS FOUND -->
+
+                    <div class="analysis-stat-card">
+
+                        <div
+                            class="analysis-stat-icon purple"
+                        >
+
+                            <i
+                                class="bi bi-layers"
+                            ></i>
+
+                        </div>
+
+
+                        <div
+                            class="analysis-stat-content"
+                        >
+
+                            <span
+                                class="analysis-stat-title"
+                            >
+
+                                Skills Found
+
+                            </span>
+
+
+                            <div
+                                class="analysis-stat-number"
+                            >
+
+                                <strong
+                                    id="skillsFoundValue"
+                                >
+
+                                    0
+
+                                </strong>
+
+                            </div>
+
+
+                            <p>
+
+                                Relevant skills identified in your resume.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- SECTION COVERAGE -->
+
+                    <div class="analysis-stat-card">
+
+                        <div
+                            class="analysis-stat-icon cyan"
+                        >
+
+                            <i
+                                class="bi bi-file-earmark-text"
+                            ></i>
+
+                        </div>
+
+
+                        <div
+                            class="analysis-stat-content"
+                        >
+
+                            <span
+                                class="analysis-stat-title"
+                            >
+
+                                Section Coverage
+
+                            </span>
+
+
+                            <div
+                                class="analysis-stat-number"
+                            >
+
+                                <strong
+                                    id="sectionCoverageValue"
+                                >
+
+                                    0 / 5
+
+                                </strong>
+
+                            </div>
+
+
+                            <p
+                                id="sectionCoverageText"
+                            >
+
+                                All key sections are present.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     ROW ONE
+                ================================================== -->
+
+                <div
+                    class="analysis-grid-row analysis-grid-row-one"
+                >
+
+
+                    <!-- DETECTED SKILLS -->
+
+                    <div class="analysis-card">
+
+                        <div
+                            class="analysis-card-header"
+                        >
+
+                            <div
+                                class="analysis-card-title"
+                            >
+
+                                <i
+                                    class="bi bi-layers"
+                                ></i>
+
+                                <strong>
+                                    Detected Skills
+                                </strong>
+
+                            </div>
+
+
+                            <button
+                                type="button"
+                                id="skillsViewAllButton"
+                                class="analysis-view-all"
+                            >
+
+                                View All
+
+                                <i
+                                    class="bi bi-arrow-right"
+                                ></i>
+
+                            </button>
+
+                        </div>
+
+
+                        <div
+                            id="analysisSkills"
+                            class="analysis-skill-preview"
+                        ></div>
+
+                    </div>
+
+
+
+                    <!-- RESUME SECTIONS -->
+
+                    <div class="analysis-card">
+
+                        <div
+                            class="analysis-card-header"
+                        >
+
+                            <div
+                                class="analysis-card-title"
+                            >
+
+                                <i
+                                    class="bi bi-file-earmark-text"
+                                ></i>
+
+                                <strong>
+                                    Resume Sections
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            id="analysisSections"
+                            class="analysis-section-list"
+                        ></div>
+
+                    </div>
+
+
+
+                    <!-- STRENGTHS -->
+
+                    <div class="analysis-card">
+
+                        <div
+                            class="analysis-card-header"
+                        >
+
+                            <div
+                                class="analysis-card-title"
+                            >
+
+                                <i
+                                    class="bi bi-trophy"
+                                ></i>
+
+                                <strong>
+                                    Strengths
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            id="analysisStrengths"
+                            class="analysis-strength-list"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     ROW TWO
+                ================================================== -->
+
+                <div
+                    class="analysis-grid-row analysis-grid-row-two"
+                >
+
+
+                    <!-- IMPROVEMENT SUGGESTIONS -->
+
+                    <div class="analysis-card">
+
+                        <div
+                            class="analysis-card-header"
+                        >
+
+                            <div
+                                class="analysis-card-title"
+                            >
+
+                                <i
+                                    class="bi bi-lightbulb"
+                                ></i>
+
+                                <strong>
+                                    Improvement Suggestions
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            id="analysisSuggestions"
+                            class="analysis-suggestion-list"
+                        ></div>
+
+                    </div>
+
+
+
+                    <!-- RESUME SCORE TREND -->
+
+                    <div
+                        class="analysis-card analysis-trend-card"
+                    >
+
+                        <div
+                            class="analysis-card-header"
+                        >
+
+                            <div
+                                class="analysis-card-title"
+                            >
+
+                                <i
+                                    class="bi bi-graph-up-arrow"
+                                ></i>
+
+                                <strong>
+                                    Resume Score Trend
+                                </strong>
+
+                            </div>
+
+
+                            <div
+                                class="analysis-trend-period"
+                            >
+
+                                Last 7 Analyses
+
+                                <i
+                                    class="bi bi-chevron-down"
+                                ></i>
+
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            class="analysis-chart-area"
+                        >
+
+                            <canvas
+                                id="resumeScoreTrendChart"
+                            ></canvas>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- SKILL EVIDENCE -->
+
+                    <div class="analysis-card">
+
+                        <div
+                            class="analysis-card-header"
+                        >
+
+                            <div
+                                class="analysis-card-title skill-evidence-title"
+                            >
+
+                                <i
+                                    class="bi bi-search"
+                                ></i>
+
+                                <div>
+
+                                    <strong>
+                                        Skill Evidence
+                                    </strong>
+
+                                    <small>
+
+                                        Where your key skills appear in your resume.
+
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            id="analysisSkillEvidence"
+                            class="analysis-evidence-list"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+
+<!-- =========================================================
+     DETAIL MODAL
+========================================================= -->
+
+<div
+    id="analysisDetailModal"
+    class="analysis-modal"
+    aria-hidden="true"
+>
+
+    <div
+        class="analysis-modal-backdrop"
+    ></div>
+
+
+    <div
+        class="analysis-modal-dialog"
+    >
+
+        <div
+            class="analysis-modal-header"
+        >
+
+            <div>
+
+                <span
+                    id="analysisModalEyebrow"
+                >
+
+                    ResumeIQ Analysis
+
+                </span>
+
+
+                <h2
+                    id="analysisModalTitle"
+                >
+
+                    Details
+
+                </h2>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="analysisModalClose"
+                class="analysis-modal-close"
+            >
+
+                <i
+                    class="bi bi-x-lg"
+                ></i>
+
+            </button>
+
+        </div>
+
+
+        <div
+            id="analysisModalBody"
+            class="analysis-modal-body"
+        ></div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script src="../js/auth.js"></script>
+
+<script src="../js/candidate.js"></script>
+
+<script
+    src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"
+></script>
+
+<script src="../js/analysis.js"></script>
+
+
+
+<script>
+
+    async function protectAnalysisPage() {
+
+        try {
+
+            const user =
+                await getCurrentUser();
+
+
+            if (!user) {
+
+                window.location.replace(
+                    "../auth/login.html"
+                );
+
+                return;
+            }
+
+
+            const role =
+                String(
+                    user.role || ""
+                )
+                .trim()
+                .toLowerCase();
+
+
+            if (role === "candidate") {
+
+                document.body.style.visibility =
+                    "visible";
+
+                return;
+            }
+
+
+            redirectByRole(
+                role
+            );
+
+
+        } catch (error) {
+
+            console.error(
+                "Analysis authentication failed:",
+                error
+            );
+
+
+            clearAuthData();
+
+
+            window.location.replace(
+                "../auth/login.html"
+            );
+
+        }
+
+    }
+
+
+    protectAnalysisPage();
+
+</script>
+
+
+
+<!-- PROFILE DROPDOWN SCRIPT -->
+
+<script>
+
+    (function setupCandidateProfileMenu() {
+
+
+        const profile =
+            document.querySelector(
+                ".candidate-profile"
+            );
+
+
+        const menu =
+            document.getElementById(
+                "candidateProfileMenu"
+            );
+
+
+        const logoutButton =
+            document.getElementById(
+                "candidateLogoutButton"
+            );
+
+
+        if (
+            !profile ||
+            !menu
+        ) {
+
+            return;
+
+        }
+
+
+
+        function closeProfileMenu() {
+
+            menu.classList.remove(
+                "show"
+            );
+
+
+            menu.setAttribute(
+                "aria-hidden",
+                "true"
+            );
+
+
+            profile.classList.remove(
+                "menu-open"
+            );
+
+        }
+
+
+
+        function openProfileMenu() {
+
+            menu.classList.add(
+                "show"
+            );
+
+
+            menu.setAttribute(
+                "aria-hidden",
+                "false"
+            );
+
+
+            profile.classList.add(
+                "menu-open"
+            );
+
+        }
+
+
+
+        profile.addEventListener(
+            "click",
+            function (event) {
+
+
+                if (
+                    event.target.closest(
+                        ".candidate-profile-menu"
+                    )
+                ) {
+
+                    return;
+
+                }
+
+
+                if (
+                    menu.classList.contains(
+                        "show"
+                    )
+                ) {
+
+                    closeProfileMenu();
+
+                } else {
+
+                    openProfileMenu();
+
+                }
+
+            }
+        );
+
+
+
+        document.addEventListener(
+            "click",
+            function (event) {
+
+                if (
+                    !profile.contains(
+                        event.target
+                    )
+                ) {
+
+                    closeProfileMenu();
+
+                }
+
+            }
+        );
+
+
+
+        document.addEventListener(
+            "keydown",
+            function (event) {
+
+                if (
+                    event.key ===
+                    "Escape"
+                ) {
+
+                    closeProfileMenu();
+
+                }
+
+            }
+        );
+
+
+
+        if (logoutButton) {
+
+            logoutButton.addEventListener(
+                "click",
+                function () {
+
+
+                    if (
+                        typeof clearAuthData ===
+                        "function"
+                    ) {
+
+                        clearAuthData();
+
+                    } else {
+
+                        localStorage.removeItem(
+                            "access_token"
+                        );
+
+                        localStorage.removeItem(
+                            "token"
+                        );
+
+                        localStorage.removeItem(
+                            "user"
+                        );
+
+                        sessionStorage.clear();
+
+                    }
+
+
+                    window.location.replace(
+                        "../auth/login.html"
+                    );
+
+                }
+            );
+
+        }
+
+    })();
+
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+{
+    "model_name": "Random Forest",
+    "model_type": "binary_classification",
+    "target": "resume_quality",
+    "target_mapping": {
+        "low": 0,
+        "high": 1
+    },
+    "features": [
+        "years_college",
+        "college_degree",
+        "honors",
+        "worked_during_school",
+        "years_experience",
+        "computer_skills",
+        "special_skills",
+        "volunteer",
+        "employment_holes",
+        "has_email_address"
+    ],
+    "accuracy": 0.988706,
+    "precision": 0.987755,
+    "recall": 0.989775,
+    "f1": 0.988764,
+    "roc_auc": 0.997175,
+    "excluded_sensitive_features": [
+        "firstname",
+        "race",
+        "gender"
+    ],
+    "excluded_leakage_features": [
+        "received_callback"
+    ]
+}

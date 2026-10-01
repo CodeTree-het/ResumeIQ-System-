@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>ResumeIQ | Upload Resume</title>
+
+    <!-- Bootstrap -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <!-- Common -->
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <!-- Candidate Common -->
+
+    <link
+        rel="stylesheet"
+        href="../css/candidate.css"
+    >
+
+    <!-- Upload Resume -->
+
+    <link
+        rel="stylesheet"
+        href="../css/Resumes.css?v=20260916-final-ui"
+    >
+
+</head>
+
+<body
+    class="candidate-dashboard-page"
+    style="visibility: hidden;"
+>
+
+<div class="candidate-layout">
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="candidate-sidebar">
+
+        <div>
+
+            <!-- BRAND -->
+
+            <div class="candidate-brand resume-upload-brand">
+
+                <div class="resumeiq-wordmark">
+
+                    <span class="resume-word">
+                        Resume
+                    </span>
+
+                    <span class="iq-word">
+                        IQ
+                    </span>
+
+                </div>
+
+                <p>
+                    AI-Powered Resume Intelligence
+                </p>
+
+            </div>
+
+            <!-- MENU -->
+
+            <nav class="candidate-menu">
+
+                <a
+                    href="dashboard.html"
+                    class="candidate-menu-link"
+                >
+
+                    <i class="bi bi-house-door"></i>
+
+                    <span>
+                        Dashboard
+                    </span>
+
+                </a>
+
+                <a
+                    href="resumes.html"
+                    class="candidate-menu-link"
+                >
+
+                    <i class="bi bi-file-earmark-text"></i>
+
+                    <span>
+                        My Resumes
+                    </span>
+
+                </a>
+
+                <a
+                    href="resume.html"
+                    class="candidate-menu-link active"
+                >
+
+                    <i class="bi bi-upload"></i>
+
+                    <span>
+                        Upload Resume
+                    </span>
+
+                </a>
+
+                <a
+                    href="analysis.html"
+                    class="candidate-menu-link"
+                >
+
+                    <i class="bi bi-bar-chart"></i>
+
+                    <span>
+                        Analysis
+                    </span>
+
+                </a>
+
+                <a
+                    href="jobs.html"
+                    class="candidate-menu-link"
+                >
+
+                    <i class="bi bi-calendar-check"></i>
+
+                    <span>
+                        Job Match
+                    </span>
+
+                </a>
+
+                <a
+                    href="#"
+                    class="candidate-menu-link"
+                >
+
+                    <i class="bi bi-bullseye"></i>
+
+                    <span>
+                        Skill Gap
+                    </span>
+
+                </a>
+
+                <a
+                    href="recommendations.html"
+                    class="candidate-menu-link"
+                >
+
+                    <i class="bi bi-lightbulb"></i>
+
+                    <span>
+                        Recommendations
+                    </span>
+
+                </a>
+
+                <a
+                    href="settings.html"
+                    class="candidate-menu-link"
+                >
+
+                    <i class="bi bi-gear"></i>
+
+                    <span>
+                        Settings
+                    </span>
+
+                </a>
+
+            </nav>
+
+        </div>
+
+        <!-- SIDEBAR BOTTOM -->
+
+        <div class="candidate-sidebar-bottom">
+
+            <div class="candidate-career-box">
+
+                <div class="career-icon">
+                    🚀
+                </div>
+
+                <div>
+
+                    <strong>
+                        Build a Smarter
+                        <br>
+                        Career with AI
+                    </strong>
+
+                    <p>
+                        Better insights.
+                        Brighter opportunities.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="resume-upload-sidebar-footer">
+
+                <p>
+                    © 2026 ResumeIQ
+                </p>
+
+                <span>
+                    Your Skills. A Smarter Tomorrow.
+                </span>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="candidate-main">
+
+        <!-- =================================================
+             TOPBAR
+        ================================================== -->
+
+        <header class="candidate-topbar resume-upload-topbar">
+
+            <!-- SEARCH -->
+
+            <div class="candidate-search resume-upload-search">
+
+                <i class="bi bi-search"></i>
+
+                <input
+                    type="text"
+                    placeholder="Search jobs, skills, or resume insights..."
+                >
+
+            </div>
+
+            <!-- RIGHT -->
+
+            <div class="candidate-topbar-right">
+
+                <button
+                    type="button"
+                    class="candidate-notification"
+                >
+
+                    <i class="bi bi-bell"></i>
+
+                    <span></span>
+
+                </button>
+
+                <div class="candidate-profile-wrapper">
+
+                    <button
+                        type="button"
+                        class="candidate-profile candidate-profile-trigger"
+                        id="candidateProfileTrigger"
+                        aria-expanded="false"
+                    >
+
+                        <div
+                            class="candidate-avatar"
+                            data-candidate-avatar
+                        >
+                            C
+                        </div>
+
+                        <div class="candidate-profile-info">
+
+                            <strong data-candidate-name>
+                                Candidate
+                            </strong>
+
+                            <span data-candidate-role>
+                                Candidate
+                            </span>
+
+                        </div>
+
+                        <i
+                            class="bi bi-chevron-down candidate-profile-chevron"
+                            id="candidateProfileChevron"
+                        ></i>
+
+                    </button>
+
+                    <!-- PROFILE DROPDOWN -->
+
+                    <div
+                        class="candidate-profile-dropdown"
+                        id="candidateProfileDropdown"
+                    >
+
+                        <div class="candidate-dropdown-user">
+
+                            <div
+                                class="candidate-dropdown-avatar"
+                                data-candidate-avatar
+                            >
+                                C
+                            </div>
+
+                            <div class="candidate-dropdown-user-info">
+
+                                <strong data-candidate-name>
+                                    Candidate
+                                </strong>
+
+                                <span data-candidate-email>
+                                    candidate@email.com
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="candidate-dropdown-divider"></div>
+
+                        <a
+                            href="settings.html"
+                            class="candidate-dropdown-item"
+                        >
+
+                            <span class="candidate-dropdown-icon settings">
+
+                                <i class="bi bi-gear"></i>
+
+                            </span>
+
+                            <div class="candidate-dropdown-item-copy">
+
+                                <strong>
+                                    Settings
+                                </strong>
+
+                                <small>
+                                    Manage your account
+                                </small>
+
+                            </div>
+
+                            <i class="bi bi-chevron-right candidate-dropdown-arrow"></i>
+
+                        </a>
+
+                        <button
+                            type="button"
+                            class="candidate-dropdown-item candidate-logout-item"
+                            id="candidateLogoutButton"
+                        >
+
+                            <span class="candidate-dropdown-icon logout">
+
+                                <i class="bi bi-box-arrow-right"></i>
+
+                            </span>
+
+                            <div class="candidate-dropdown-item-copy">
+
+                                <strong>
+                                    Logout
+                                </strong>
+
+                                <small>
+                                    Sign out of ResumeIQ
+                                </small>
+
+                            </div>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- =================================================
+             PAGE CONTENT
+        ================================================== -->
+
+        <section class="candidate-content resume-upload-content">
+
+            <!-- =================================================
+                 HEADING
+            ================================================== -->
+
+            <div class="resume-upload-heading">
+
+                <div>
+
+                    <p class="resume-upload-label">
+                        Upload Resume
+                    </p>
+
+                    <h1>
+                        Resume Upload
+                    </h1>
+
+                    <p class="resume-upload-subtitle">
+                        Upload your resume and let AI extract your information automatically.
+                    </p>
+
+                </div>
+
+                <div class="resume-upload-quote">
+
+                    <span></span>
+
+                    <p>
+                        “Your resume tells a story.
+                        <br>
+                        We help it reach further.”
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- =================================================
+                 MAIN GRID
+            ================================================== -->
+
+            <div class="resume-upload-grid">
+
+                <!-- =================================================
+                     LEFT CARD
+                ================================================== -->
+
+                <div class="resume-upload-left-card">
+
+                    <input
+                        type="file"
+                        id="resumeFileInput"
+                        accept=".pdf,.docx"
+                        hidden
+                    >
+
+                    <!-- =============================================
+                         DROP ZONE
+                    ============================================== -->
+
+                    <div
+                        class="resume-upload-dropzone"
+                        id="resumeDropZone"
+                    >
+
+                        <div class="resume-upload-cloud">
+
+                            <i class="bi bi-cloud-arrow-up-fill"></i>
+
+                        </div>
+
+                        <h2>
+                            Drag and drop your resume here
+                        </h2>
+
+                        <p>
+
+                            or
+
+                            <button
+                                type="button"
+                                id="resumeBrowseButton"
+                            >
+                                click to browse files
+                            </button>
+
+                        </p>
+
+                        <span class="resume-upload-support">
+                            Supports PDF and DOCX files (Max 10 MB)
+                        </span>
+
+                        <div class="resume-upload-formats">
+
+                            <div>
+
+                                <span class="format-file pdf">
+                                    PDF
+                                </span>
+
+                                <small>
+                                    .PDF
+                                </small>
+
+                            </div>
+
+                            <div>
+
+                                <span class="format-file docx">
+                                    W
+                                </span>
+
+                                <small>
+                                    .DOCX
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- =============================================
+                         FILE CARD
+                    ============================================== -->
+
+                    <div
+                        class="resume-current-file"
+                        id="uploadedFilePreview"
+                        style="display: none;"
+                    >
+
+                        <div class="resume-current-left">
+
+                            <div
+                                class="resume-big-file pdf"
+                                id="selectedFileIcon"
+                            >
+                                PDF
+                            </div>
+
+                            <div class="resume-current-info">
+
+                                <strong id="uploadedFileName">
+                                    Resume.pdf
+                                </strong>
+
+                                <p id="uploadedFileDetails">
+                                    PDF Document
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="resume-current-right">
+
+                            <div class="upload-success">
+
+                                <i class="bi bi-check-circle-fill"></i>
+
+                                <span id="uploadStatusText">
+                                    Ready
+                                </span>
+
+                            </div>
+
+                            <button
+                                type="button"
+                                class="resume-file-menu"
+                                id="removeResumeButton"
+                            >
+
+                                <i class="bi bi-three-dots-vertical"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <!-- =============================================
+                         EXTRACTION SUCCESS
+                    ============================================== -->
+
+                    <div
+                        class="resume-extraction-card"
+                        id="extractionSuccessCard"
+                        style="display: none;"
+                    >
+
+                        <div class="resume-extraction-check">
+
+                            <i class="bi bi-check-lg"></i>
+
+                        </div>
+
+                        <div class="resume-extraction-copy">
+
+                            <strong>
+                                Text extracted successfully!
+                            </strong>
+
+                            <p>
+                                We've extracted key information from your resume using AI.
+                            </p>
+
+                        </div>
+
+                        <div class="resume-extraction-action">
+
+                            Extraction Complete
+
+                            <i class="bi bi-arrow-right"></i>
+
+                        </div>
+
+                    </div>
+
+                    <!-- =============================================
+                         BUTTONS
+                    ============================================== -->
+
+                    <div class="resume-upload-actions">
+
+                        <button
+                            type="button"
+                            class="resume-upload-new"
+                            id="uploadNewResumeButton"
+                        >
+
+                            <i class="bi bi-upload"></i>
+
+                            Upload New Resume
+
+                        </button>
+
+                        <button
+                            type="button"
+                            class="resume-analyze-button"
+                            id="analyseResumeButton"
+                            disabled
+                        >
+
+                            <i class="bi bi-stars"></i>
+
+                            Analyze Resume
+
+                            <i class="bi bi-arrow-right"></i>
+
+                        </button>
+
+                    </div>
+
+                    <!-- PRIVACY -->
+
+                    <div class="resume-upload-private">
+
+                        <i class="bi bi-lock-fill"></i>
+
+                        <span>
+                            Your data is secure and private.
+                            We never share your resume with third parties.
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <!-- =================================================
+                     RIGHT
+                ================================================== -->
+
+                <div class="resume-upload-right">
+
+                    <!-- =============================================
+                         RESUME PREVIEW
+                    ============================================== -->
+
+                    <div class="resume-preview-master">
+
+                        <!-- HEADER -->
+
+                        <div class="resume-preview-header">
+
+                            <div>
+
+                                <i class="bi bi-file-earmark-text"></i>
+
+                                <strong>
+                                    Resume Preview
+                                </strong>
+
+                            </div>
+
+                            <button
+                                type="button"
+                                id="viewFullResumeButton"
+                            >
+
+                                View Full Resume
+
+                                <i class="bi bi-box-arrow-up-right"></i>
+
+                            </button>
+
+                        </div>
+
+                        <!-- =========================================
+                             FILE ROW
+                        ========================================== -->
+
+                        <div class="resume-preview-file-row">
+
+                            <div class="resume-preview-file-left">
+
+                                <div
+                                    class="resume-big-file pdf"
+                                    id="previewFileIcon"
+                                >
+                                    PDF
+                                </div>
+
+                                <div class="resume-preview-file-copy">
+
+                                    <strong id="previewResumeFilename">
+                                        No resume selected
+                                    </strong>
+
+                                    <p id="previewResumeMeta">
+                                        Upload and analyze a resume
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <div
+                                class="resume-parsed-badge"
+                                id="parsedSuccessfullyBadge"
+                                style="display: none;"
+                            >
+
+                                <i class="bi bi-check-circle-fill"></i>
+
+                                <span>
+                                    Parsed Successfully
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <!-- =========================================
+                             INNER AREA
+                        ========================================== -->
+
+                        <div class="resume-preview-inner">
+
+                            <!-- =====================================
+                                 DETECTED
+                            ====================================== -->
+
+                            <div class="resume-detected-panel">
+
+                                <h3>
+                                    Detected Sections
+                                </h3>
+
+                                <div
+                                    class="detected-section-list"
+                                    id="detectedSectionList"
+                                >
+                                </div>
+
+                            </div>
+
+                            <!-- =====================================
+                                 EXTRACTED
+                            ====================================== -->
+
+                            <div class="resume-extracted-panel">
+
+                                <div class="resume-extracted-heading">
+
+                                    <i class="bi bi-file-earmark-text"></i>
+
+                                    <strong>
+                                        Extracted Text Preview
+                                    </strong>
+
+                                </div>
+
+                                <div
+                                    class="extracted-text-preview"
+                                    id="extractedTextPreview"
+                                >
+
+                                    <p>
+                                        Upload and analyze your resume to view extracted text here.
+                                    </p>
+
+                                    <span>
+                                        Waiting for analysis
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- =============================================
+                         NEXT
+                    ============================================== -->
+
+                    <div class="resume-next-card">
+
+                        <div class="resume-next-heading">
+
+                            <i class="bi bi-lightbulb"></i>
+
+                            <strong>
+                                What happens next?
+                            </strong>
+
+                        </div>
+
+                        <div class="resume-next-grid">
+
+                            <div class="resume-next-item">
+
+                                <span>
+                                    1
+                                </span>
+
+                                <p>
+                                    We extract and organize
+                                    your resume content using AI.
+                                </p>
+
+                            </div>
+
+                            <div class="resume-next-divider"></div>
+
+                            <div class="resume-next-item">
+
+                                <span>
+                                    2
+                                </span>
+
+                                <p>
+                                    You can review the extracted
+                                    information if needed.
+                                </p>
+
+                            </div>
+
+                            <div class="resume-next-divider"></div>
+
+                            <div class="resume-next-item">
+
+                                <span>
+                                    3
+                                </span>
+
+                                <p>
+                                    Then analyze your resume
+                                    and explore job matches.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<!-- =====================================================
+     JS
+====================================================== -->
+
+<script src="../js/auth.js"></script>
+
+<script src="../js/candidate.js?v=20260916-profile"></script>
+
+<script>
+
+async function protectCandidatePage() {
+
+    try {
+
+        const token =
+            getToken();
+
+
+        if (!token) {
+
+            window.location.replace(
+                "../auth/login.html"
+            );
+
+            return;
+        }
+
+
+        const user =
+            await getCurrentUser(
+                token
+            );
+
+
+        if (!user) {
+
+            window.location.replace(
+                "../auth/login.html"
+            );
+
+            return;
+        }
+
+
+        const role =
+            String(
+                user.role || ""
+            )
+            .trim()
+            .toLowerCase();
+
+
+        if (role === "candidate") {
+
+            document.body.style.visibility =
+                "visible";
+
+            return;
+        }
+
+
+        redirectByRole(
+            role
+        );
+
+
+    } catch (error) {
+
+        console.error(
+            "Candidate authentication failed:",
+            error
+        );
+
+
+        if (
+            typeof logoutUser ===
+            "function"
+        ) {
+
+            logoutUser();
+
+        } else {
+
+            window.location.replace(
+                "../auth/login.html"
+            );
+        }
+    }
+}
+
+
+protectCandidatePage();
+
+</script>
+
+<script src="../js/Resumes.js?v=20260916-final-ui"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1904 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>ResumeIQ | Settings</title>
+
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+
+    <!-- Common CSS -->
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+
+    <!-- Candidate CSS -->
+    <link
+        rel="stylesheet"
+        href="../css/candidate.css"
+    >
+
+
+    <!-- Settings CSS -->
+    <link
+        rel="stylesheet"
+        href="../css/settings.css"
+    >
+
+</head>
+
+
+<body
+    class="candidate-dashboard-page"
+    style="visibility: hidden;"
+>
+
+
+<div class="candidate-layout">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="candidate-sidebar">
+
+        <div>
+
+            <div class="candidate-brand">
+
+                <div class="resumeiq-wordmark">
+
+                    <span class="resume-word">
+                        Resume
+                    </span>
+
+                    <span class="iq-word">
+                        IQ
+                    </span>
+
+                </div>
+
+
+                <p>
+                    AI-Powered Resume Intelligence
+                </p>
+
+            </div>
+
+
+
+            <nav class="candidate-menu">
+
+
+                <a
+                    href="dashboard.html"
+                    class="candidate-menu-link"
+                >
+
+                    <i class="bi bi-house-door"></i>
+
+                    <span>
+                        Dashboard
+                    </span>
+
+                </a>
+
+
+
+                <a
+                    href="resumes.html"
+                    class="candidate-menu-link"
+                >
+
+                    <i class="bi bi-file-earmark-text"></i>
+
+                    <span>
+                        My Resumes
+                    </span>
+
+                </a>
+
+
+
+                <a
+                    href="resume.html"
+                    class="candidate-menu-link"
+                >
+
+                    <i class="bi bi-cloud-arrow-up"></i>
+
+                    <span>
+                        Upload Resume
+                    </span>
+
+                </a>
+
+
+
+                <a
+                    href="analysis.html"
+                    class="candidate-menu-link"
+                >
+
+                    <i class="bi bi-bar-chart"></i>
+
+                    <span>
+                        Analysis
+                    </span>
+
+                </a>
+
+
+
+                <a
+                    href="jobs.html"
+                    class="candidate-menu-link"
+                >
+
+                    <i class="bi bi-briefcase"></i>
+
+                    <span>
+                        Job Match
+                    </span>
+
+                </a>
+
+
+
+                <a
+                    href="#"
+                    class="candidate-menu-link"
+                >
+
+                    <i class="bi bi-bullseye"></i>
+
+                    <span>
+                        Skill Gap
+                    </span>
+
+                </a>
+
+
+
+                <a
+                    href="recommendations.html"
+                    class="candidate-menu-link"
+                >
+
+                    <i class="bi bi-lightbulb"></i>
+
+                    <span>
+                        Recommendations
+                    </span>
+
+                </a>
+
+
+
+                <a
+                    href="settings.html"
+                    class="candidate-menu-link active"
+                >
+
+                    <i class="bi bi-gear"></i>
+
+                    <span>
+                        Settings
+                    </span>
+
+                </a>
+
+
+            </nav>
+
+        </div>
+
+
+
+        <div class="candidate-sidebar-bottom">
+
+
+            <div class="candidate-career-box">
+
+                <div class="career-icon">
+                    🚀
+                </div>
+
+                <div>
+
+                    <strong>
+                        Build a Smarter Career with AI
+                    </strong>
+
+                    <p>
+                        Better insights. Brighter opportunities.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="candidate-sidebar-footer">
+                © 2026 ResumeIQ
+            </div>
+
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="candidate-main">
+
+
+        <!-- TOP BAR -->
+
+        <header class="candidate-topbar">
+
+
+            <div class="candidate-search">
+
+                <i class="bi bi-search"></i>
+
+                <input
+                    type="text"
+                    placeholder="Search settings or help..."
+                    id="settingsSearchInput"
+                >
+
+            </div>
+
+
+
+            <div class="candidate-profile">
+
+
+                <button
+                    type="button"
+                    class="candidate-notification"
+                >
+
+                    <i class="bi bi-bell"></i>
+
+                    <span></span>
+
+                </button>
+
+
+
+                <div
+                    class="candidate-avatar"
+                    data-candidate-avatar
+                >
+                    C
+                </div>
+
+
+
+                <div class="candidate-profile-info">
+
+                    <strong data-candidate-name>
+                        Candidate
+                    </strong>
+
+                    <span data-candidate-role>
+                        Candidate
+                    </span>
+
+                </div>
+
+
+
+                <i class="bi bi-chevron-down"></i>
+
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =====================================================
+             SETTINGS PAGE
+        ====================================================== -->
+
+        <section class="candidate-content settings-page">
+
+
+            <!-- PAGE HEADER -->
+
+            <div class="settings-page-header">
+
+                <div>
+
+                    <p class="settings-eyebrow">
+                        Account Control Center
+                    </p>
+
+                    <h1>
+                        Settings
+                    </h1>
+
+                    <p class="settings-description">
+
+                        Manage your account, security, privacy,
+                        preferences and troubleshooting options.
+
+                    </p>
+
+                </div>
+
+
+                <div class="settings-system-status">
+
+                    <span class="status-dot"></span>
+
+                    <span>
+                        ResumeIQ services are running
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =====================================================
+                 SETTINGS NAVIGATION
+            ====================================================== -->
+
+            <div class="settings-layout">
+
+
+                <aside class="settings-navigation">
+
+
+                    <button
+                        class="settings-nav-item active"
+                        data-settings-tab="account"
+                    >
+
+                        <i class="bi bi-person"></i>
+
+                        <span>
+                            Account
+                        </span>
+
+                    </button>
+
+
+
+                    <button
+                        class="settings-nav-item"
+                        data-settings-tab="security"
+                    >
+
+                        <i class="bi bi-shield-lock"></i>
+
+                        <span>
+                            Security
+                        </span>
+
+                    </button>
+
+
+
+                    <button
+                        class="settings-nav-item"
+                        data-settings-tab="preferences"
+                    >
+
+                        <i class="bi bi-sliders"></i>
+
+                        <span>
+                            Preferences
+                        </span>
+
+                    </button>
+
+
+
+                    <button
+                        class="settings-nav-item"
+                        data-settings-tab="notifications"
+                    >
+
+                        <i class="bi bi-bell"></i>
+
+                        <span>
+                            Notifications
+                        </span>
+
+                    </button>
+
+
+
+                    <button
+                        class="settings-nav-item"
+                        data-settings-tab="privacy"
+                    >
+
+                        <i class="bi bi-lock"></i>
+
+                        <span>
+                            Privacy & Data
+                        </span>
+
+                    </button>
+
+
+
+                    <button
+                        class="settings-nav-item"
+                        data-settings-tab="troubleshooting"
+                    >
+
+                        <i class="bi bi-tools"></i>
+
+                        <span>
+                            Troubleshooting
+                        </span>
+
+                    </button>
+
+
+
+                    <button
+                        class="settings-nav-item"
+                        data-settings-tab="help"
+                    >
+
+                        <i class="bi bi-question-circle"></i>
+
+                        <span>
+                            Help Center
+                        </span>
+
+                    </button>
+
+
+                </aside>
+
+
+
+                <!-- =================================================
+                     SETTINGS CONTENT
+                ================================================== -->
+
+                <div class="settings-content">
+
+
+                    <!-- =================================================
+                         ACCOUNT
+                    ================================================== -->
+
+                    <section
+                        class="settings-panel active"
+                        id="settings-account"
+                    >
+
+
+                        <div class="settings-section-title">
+
+                            <div>
+
+                                <h2>
+                                    Account Information
+                                </h2>
+
+                                <p>
+                                    Update your personal account details.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="settings-card">
+
+
+                            <div class="settings-profile-row">
+
+
+                                <div
+                                    class="settings-profile-avatar"
+                                    id="settingsAvatar"
+                                >
+                                    C
+                                </div>
+
+
+                                <div>
+
+                                    <h3 id="settingsProfileName">
+                                        Candidate
+                                    </h3>
+
+                                    <p>
+                                        Candidate Account
+                                    </p>
+
+                                </div>
+
+
+                                <button
+                                    type="button"
+                                    class="settings-secondary-button"
+                                    id="changePhotoButton"
+                                >
+
+                                    <i class="bi bi-camera"></i>
+
+                                    Change Photo
+
+                                </button>
+
+
+                            </div>
+
+
+
+                            <div class="settings-form-grid">
+
+
+                                <div class="settings-form-group">
+
+                                    <label for="settingsName">
+                                        Full Name
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="settingsName"
+                                        placeholder="Enter your name"
+                                    >
+
+                                </div>
+
+
+
+                                <div class="settings-form-group">
+
+                                    <label for="settingsEmail">
+                                        Email Address
+                                    </label>
+
+                                    <input
+                                        type="email"
+                                        id="settingsEmail"
+                                        placeholder="Enter email address"
+                                    >
+
+                                </div>
+
+
+
+                                <div class="settings-form-group">
+
+                                    <label for="settingsMobile">
+                                        Mobile Number
+                                    </label>
+
+                                    <input
+                                        type="tel"
+                                        id="settingsMobile"
+                                        placeholder="Enter mobile number"
+                                    >
+
+                                </div>
+
+
+
+                                <div class="settings-form-group">
+
+                                    <label for="settingsLocation">
+                                        Location
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="settingsLocation"
+                                        placeholder="Enter location"
+                                    >
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <div class="settings-action-row">
+
+                                <button
+                                    type="button"
+                                    class="settings-primary-button"
+                                    id="saveAccountSettings"
+                                >
+
+                                    Save Changes
+
+                                </button>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </section>
+
+
+
+                    <!-- =================================================
+                         SECURITY
+                    ================================================== -->
+
+                    <section
+                        class="settings-panel"
+                        id="settings-security"
+                    >
+
+
+                        <div class="settings-section-title">
+
+                            <div>
+
+                                <h2>
+                                    Password & Security
+                                </h2>
+
+                                <p>
+                                    Keep your ResumeIQ account secure.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="settings-card">
+
+
+                            <h3>
+                                Change Password
+                            </h3>
+
+
+
+                            <div class="settings-form-group">
+
+                                <label for="currentPassword">
+                                    Current Password
+                                </label>
+
+                                <input
+                                    type="password"
+                                    id="currentPassword"
+                                    placeholder="Enter current password"
+                                >
+
+                            </div>
+
+
+
+                            <div class="settings-form-grid">
+
+
+                                <div class="settings-form-group">
+
+                                    <label for="newPassword">
+                                        New Password
+                                    </label>
+
+                                    <input
+                                        type="password"
+                                        id="newPassword"
+                                        placeholder="Enter new password"
+                                    >
+
+                                </div>
+
+
+
+                                <div class="settings-form-group">
+
+                                    <label for="confirmNewPassword">
+                                        Confirm Password
+                                    </label>
+
+                                    <input
+                                        type="password"
+                                        id="confirmNewPassword"
+                                        placeholder="Confirm new password"
+                                    >
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <button
+                                type="button"
+                                class="settings-primary-button"
+                                id="changePasswordButton"
+                            >
+
+                                Update Password
+
+                            </button>
+
+
+                        </div>
+
+
+
+                        <div class="settings-card">
+
+
+                            <div class="settings-setting-row">
+
+
+                                <div>
+
+                                    <h3>
+                                        Active Sessions
+                                    </h3>
+
+                                    <p>
+                                        Sign out from all other devices if you notice unusual activity.
+                                    </p>
+
+                                </div>
+
+
+                                <button
+                                    type="button"
+                                    class="settings-secondary-button"
+                                    id="logoutAllButton"
+                                >
+
+                                    Logout All Devices
+
+                                </button>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                    </section>
+
+
+
+                    <!-- =================================================
+                         PREFERENCES
+                    ================================================== -->
+
+                    <section
+                        class="settings-panel"
+                        id="settings-preferences"
+                    >
+
+
+                        <div class="settings-section-title">
+
+                            <div>
+
+                                <h2>
+                                    Resume & Job Preferences
+                                </h2>
+
+                                <p>
+                                    Personalize your ResumeIQ experience.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="settings-card">
+
+
+                            <div class="settings-form-grid">
+
+
+                                <div class="settings-form-group">
+
+                                    <label for="preferredRole">
+                                        Preferred Job Role
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="preferredRole"
+                                        placeholder="Example: Data Analyst"
+                                    >
+
+                                </div>
+
+
+
+                                <div class="settings-form-group">
+
+                                    <label for="experienceLevel">
+                                        Experience Level
+                                    </label>
+
+                                    <select id="experienceLevel">
+
+                                        <option value="">
+                                            Select level
+                                        </option>
+
+                                        <option value="fresher">
+                                            Fresher
+                                        </option>
+
+                                        <option value="junior">
+                                            Junior
+                                        </option>
+
+                                        <option value="mid">
+                                            Mid Level
+                                        </option>
+
+                                        <option value="senior">
+                                            Senior
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+
+                                <div class="settings-form-group">
+
+                                    <label for="workMode">
+                                        Preferred Work Mode
+                                    </label>
+
+                                    <select id="workMode">
+
+                                        <option value="">
+                                            Select work mode
+                                        </option>
+
+                                        <option value="onsite">
+                                            On-site
+                                        </option>
+
+                                        <option value="remote">
+                                            Remote
+                                        </option>
+
+                                        <option value="hybrid">
+                                            Hybrid
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+
+                                <div class="settings-form-group">
+
+                                    <label for="analysisLanguage">
+                                        Analysis Language
+                                    </label>
+
+                                    <select id="analysisLanguage">
+
+                                        <option value="english">
+                                            English
+                                        </option>
+
+                                        <option value="hindi">
+                                            Hindi
+                                        </option>
+
+                                        <option value="gujarati">
+                                            Gujarati
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <div class="settings-setting-row">
+
+
+                                <div>
+
+                                    <h3>
+                                        AI Resume Suggestions
+                                    </h3>
+
+                                    <p>
+                                        Show AI-based resume improvement recommendations.
+                                    </p>
+
+                                </div>
+
+
+                                <label class="settings-switch">
+
+                                    <input
+                                        type="checkbox"
+                                        id="aiSuggestionsToggle"
+                                        checked
+                                    >
+
+                                    <span></span>
+
+                                </label>
+
+
+                            </div>
+
+
+
+                            <div class="settings-setting-row">
+
+
+                                <div>
+
+                                    <h3>
+                                        ATS Recommendations
+                                    </h3>
+
+                                    <p>
+                                        Show suggestions that improve ATS compatibility.
+                                    </p>
+
+                                </div>
+
+
+                                <label class="settings-switch">
+
+                                    <input
+                                        type="checkbox"
+                                        id="atsSuggestionsToggle"
+                                        checked
+                                    >
+
+                                    <span></span>
+
+                                </label>
+
+
+                            </div>
+
+
+
+                            <button
+                                type="button"
+                                class="settings-primary-button"
+                                id="savePreferencesButton"
+                            >
+
+                                Save Preferences
+
+                            </button>
+
+
+                        </div>
+
+
+                    </section>
+
+
+
+                    <!-- =================================================
+                         NOTIFICATIONS
+                    ================================================== -->
+
+                    <section
+                        class="settings-panel"
+                        id="settings-notifications"
+                    >
+
+
+                        <div class="settings-section-title">
+
+                            <div>
+
+                                <h2>
+                                    Notifications
+                                </h2>
+
+                                <p>
+                                    Choose which alerts you want to receive.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="settings-card">
+
+
+                            <div class="settings-setting-row">
+
+                                <div>
+
+                                    <h3>
+                                        Resume Analysis Complete
+                                    </h3>
+
+                                    <p>
+                                        Notify me when resume analysis is completed.
+                                    </p>
+
+                                </div>
+
+                                <label class="settings-switch">
+
+                                    <input
+                                        type="checkbox"
+                                        id="analysisNotification"
+                                        checked
+                                    >
+
+                                    <span></span>
+
+                                </label>
+
+                            </div>
+
+
+
+                            <div class="settings-setting-row">
+
+                                <div>
+
+                                    <h3>
+                                        Job Match Alerts
+                                    </h3>
+
+                                    <p>
+                                        Notify me when relevant job matches are found.
+                                    </p>
+
+                                </div>
+
+                                <label class="settings-switch">
+
+                                    <input
+                                        type="checkbox"
+                                        id="jobNotification"
+                                        checked
+                                    >
+
+                                    <span></span>
+
+                                </label>
+
+                            </div>
+
+
+
+                            <div class="settings-setting-row">
+
+                                <div>
+
+                                    <h3>
+                                        Resume Tips
+                                    </h3>
+
+                                    <p>
+                                        Receive tips for improving your resume.
+                                    </p>
+
+                                </div>
+
+                                <label class="settings-switch">
+
+                                    <input
+                                        type="checkbox"
+                                        id="tipsNotification"
+                                        checked
+                                    >
+
+                                    <span></span>
+
+                                </label>
+
+                            </div>
+
+
+
+                            <div class="settings-setting-row">
+
+                                <div>
+
+                                    <h3>
+                                        Security Alerts
+                                    </h3>
+
+                                    <p>
+                                        Receive alerts for important account activity.
+                                    </p>
+
+                                </div>
+
+                                <label class="settings-switch">
+
+                                    <input
+                                        type="checkbox"
+                                        id="securityNotification"
+                                        checked
+                                    >
+
+                                    <span></span>
+
+                                </label>
+
+                            </div>
+
+
+
+                            <button
+                                type="button"
+                                class="settings-primary-button"
+                                id="saveNotificationsButton"
+                            >
+
+                                Save Notification Settings
+
+                            </button>
+
+
+                        </div>
+
+
+                    </section>
+
+
+
+                    <!-- =================================================
+                         PRIVACY
+                    ================================================== -->
+
+                    <section
+                        class="settings-panel"
+                        id="settings-privacy"
+                    >
+
+
+                        <div class="settings-section-title">
+
+                            <div>
+
+                                <h2>
+                                    Privacy & Data
+                                </h2>
+
+                                <p>
+                                    Control how your data is stored and used.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="settings-card">
+
+
+                            <div class="settings-setting-row">
+
+                                <div>
+
+                                    <h3>
+                                        Resume Visibility
+                                    </h3>
+
+                                    <p>
+                                        Control whether recruiters can access your resume.
+                                    </p>
+
+                                </div>
+
+
+                                <select
+                                    id="resumeVisibility"
+                                    class="settings-inline-select"
+                                >
+
+                                    <option value="private">
+                                        Private
+                                    </option>
+
+                                    <option value="recruiters">
+                                        Recruiters
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+
+                            <div class="settings-setting-row">
+
+                                <div>
+
+                                    <h3>
+                                        Download My Data
+                                    </h3>
+
+                                    <p>
+                                        Download a copy of your ResumeIQ account data.
+                                    </p>
+
+                                </div>
+
+
+                                <button
+                                    type="button"
+                                    class="settings-secondary-button"
+                                    id="downloadDataButton"
+                                >
+
+                                    Download Data
+
+                                </button>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="settings-card danger-zone">
+
+
+                            <h3>
+                                Danger Zone
+                            </h3>
+
+
+                            <div class="settings-setting-row">
+
+                                <div>
+
+                                    <strong>
+                                        Deactivate Account
+                                    </strong>
+
+                                    <p>
+                                        Temporarily disable your ResumeIQ account.
+                                    </p>
+
+                                </div>
+
+
+                                <button
+                                    type="button"
+                                    class="settings-danger-outline-button"
+                                    id="deactivateAccountButton"
+                                >
+
+                                    Deactivate
+
+                                </button>
+
+                            </div>
+
+
+
+                            <div class="settings-setting-row">
+
+                                <div>
+
+                                    <strong>
+                                        Delete Account
+                                    </strong>
+
+                                    <p>
+                                        Permanently delete your account and stored data.
+                                    </p>
+
+                                </div>
+
+
+                                <button
+                                    type="button"
+                                    class="settings-danger-button"
+                                    id="deleteAccountButton"
+                                >
+
+                                    Delete Account
+
+                                </button>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </section>
+
+
+
+                    <!-- =================================================
+                         TROUBLESHOOTING
+                    ================================================== -->
+
+                    <section
+                        class="settings-panel"
+                        id="settings-troubleshooting"
+                    >
+
+
+                        <div class="settings-section-title">
+
+                            <div>
+
+                                <h2>
+                                    Troubleshooting
+                                </h2>
+
+                                <p>
+                                    Fix common ResumeIQ issues without contacting support.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="settings-card">
+
+
+                            <div class="settings-troubleshoot-item">
+
+                                <div class="settings-tool-icon">
+
+                                    <i class="bi bi-arrow-clockwise"></i>
+
+                                </div>
+
+
+                                <div>
+
+                                    <h3>
+                                        Refresh Account Data
+                                    </h3>
+
+                                    <p>
+                                        Reload your profile and latest account information.
+                                    </p>
+
+                                </div>
+
+
+                                <button
+                                    type="button"
+                                    class="settings-secondary-button"
+                                    id="refreshAccountButton"
+                                >
+
+                                    Refresh
+
+                                </button>
+
+                            </div>
+
+
+
+                            <div class="settings-troubleshoot-item">
+
+                                <div class="settings-tool-icon">
+
+                                    <i class="bi bi-file-earmark-arrow-up"></i>
+
+                                </div>
+
+
+                                <div>
+
+                                    <h3>
+                                        Resume Upload Problem
+                                    </h3>
+
+                                    <p>
+                                        Check supported file types, size limits and upload errors.
+                                    </p>
+
+                                </div>
+
+
+                                <button
+                                    type="button"
+                                    class="settings-secondary-button"
+                                    id="resumeUploadHelpButton"
+                                >
+
+                                    Check
+
+                                </button>
+
+                            </div>
+
+
+
+                            <div class="settings-troubleshoot-item">
+
+                                <div class="settings-tool-icon">
+
+                                    <i class="bi bi-bar-chart"></i>
+
+                                </div>
+
+
+                                <div>
+
+                                    <h3>
+                                        Analysis Not Showing
+                                    </h3>
+
+                                    <p>
+                                        Reload your latest resume analysis data.
+                                    </p>
+
+                                </div>
+
+
+                                <button
+                                    type="button"
+                                    class="settings-secondary-button"
+                                    id="refreshAnalysisButton"
+                                >
+
+                                    Retry
+
+                                </button>
+
+                            </div>
+
+
+
+                            <div class="settings-troubleshoot-item">
+
+                                <div class="settings-tool-icon">
+
+                                    <i class="bi bi-trash3"></i>
+
+                                </div>
+
+
+                                <div>
+
+                                    <h3>
+                                        Clear Local Cache
+                                    </h3>
+
+                                    <p>
+                                        Remove outdated local data stored by your browser.
+                                    </p>
+
+                                </div>
+
+
+                                <button
+                                    type="button"
+                                    class="settings-secondary-button"
+                                    id="clearCacheButton"
+                                >
+
+                                    Clear Cache
+
+                                </button>
+
+                            </div>
+
+
+
+                            <div class="settings-troubleshoot-item">
+
+                                <div class="settings-tool-icon">
+
+                                    <i class="bi bi-heart-pulse"></i>
+
+                                </div>
+
+
+                                <div>
+
+                                    <h3>
+                                        Check Server Status
+                                    </h3>
+
+                                    <p>
+                                        Check whether the ResumeIQ API is available.
+                                    </p>
+
+                                </div>
+
+
+                                <button
+                                    type="button"
+                                    class="settings-secondary-button"
+                                    id="checkServerButton"
+                                >
+
+                                    Check Status
+
+                                </button>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="settings-card">
+
+                            <h3>
+                                System Information
+                            </h3>
+
+
+                            <div class="settings-system-grid">
+
+
+                                <div>
+
+                                    <span>
+                                        Application
+                                    </span>
+
+                                    <strong>
+                                        ResumeIQ
+                                    </strong>
+
+                                </div>
+
+
+                                <div>
+
+                                    <span>
+                                        Version
+                                    </span>
+
+                                    <strong>
+                                        1.0.0
+                                    </strong>
+
+                                </div>
+
+
+                                <div>
+
+                                    <span>
+                                        API Status
+                                    </span>
+
+                                    <strong id="settingsApiStatus">
+                                        Not checked
+                                    </strong>
+
+                                </div>
+
+
+                                <div>
+
+                                    <span>
+                                        Last Sync
+                                    </span>
+
+                                    <strong id="settingsLastSync">
+                                        --
+                                    </strong>
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+
+                    </section>
+
+
+
+                    <!-- =================================================
+                         HELP
+                    ================================================== -->
+
+                    <section
+                        class="settings-panel"
+                        id="settings-help"
+                    >
+
+
+                        <div class="settings-section-title">
+
+                            <div>
+
+                                <h2>
+                                    Help Center
+                                </h2>
+
+                                <p>
+                                    Quick answers for common ResumeIQ questions.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="settings-card">
+
+
+                            <div class="settings-faq-item">
+
+                                <button
+                                    class="settings-faq-question"
+                                    type="button"
+                                >
+
+                                    Why is my resume not uploading?
+
+                                    <i class="bi bi-chevron-down"></i>
+
+                                </button>
+
+
+                                <div class="settings-faq-answer">
+
+                                    ResumeIQ currently supports PDF and DOCX files up to 10 MB.
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="settings-faq-item">
+
+                                <button
+                                    class="settings-faq-question"
+                                    type="button"
+                                >
+
+                                    Why is my analysis not visible?
+
+                                    <i class="bi bi-chevron-down"></i>
+
+                                </button>
+
+
+                                <div class="settings-faq-answer">
+
+                                    Make sure your resume has been uploaded and analysed successfully.
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="settings-faq-item">
+
+                                <button
+                                    class="settings-faq-question"
+                                    type="button"
+                                >
+
+                                    How do I update my account information?
+
+                                    <i class="bi bi-chevron-down"></i>
+
+                                </button>
+
+
+                                <div class="settings-faq-answer">
+
+                                    Open Account Settings, update your information and click Save Changes.
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="settings-faq-item">
+
+                                <button
+                                    class="settings-faq-question"
+                                    type="button"
+                                >
+
+                                    What if my login session expires?
+
+                                    <i class="bi bi-chevron-down"></i>
+
+                                </button>
+
+
+                                <div class="settings-faq-answer">
+
+                                    Sign in again using your ResumeIQ email and password.
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </section>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+</div>
+
+
+
+<!-- STATUS MESSAGE -->
+
+<div
+    id="settingsToast"
+    class="settings-toast"
+>
+
+    <i class="bi bi-check-circle"></i>
+
+    <span id="settingsToastMessage">
+        Settings updated successfully.
+    </span>
+
+</div>
+
+
+
+<!-- JAVASCRIPT -->
+
+<script src="../js/auth.js"></script>
+
+<script src="../js/candidate.js"></script>
+
+<script src="../js/settings.js"></script>
+
+
+
+<script>
+
+    async function protectSettingsPage() {
+
+        try {
+
+            const user =
+                await getCurrentUser();
+
+
+            if (!user) {
+
+                window.location.replace(
+                    "../auth/login.html"
+                );
+
+                return;
+
+            }
+
+
+            const role =
+                String(
+                    user.role || ""
+                )
+                .trim()
+                .toLowerCase();
+
+
+            if (role === "candidate") {
+
+                document.body.style.visibility =
+                    "visible";
+
+                return;
+
+            }
+
+
+            redirectByRole(role);
+
+
+        } catch (error) {
+
+            console.error(
+                "Settings authentication failed:",
+                error
+            );
+
+
+            clearAuthData();
+
+
+            window.location.replace(
+                "../auth/login.html"
+            );
+
+        }
+
+    }
+
+
+    protectSettingsPage();
+
+</script>
+
+
+</body>
+
+</html> 
