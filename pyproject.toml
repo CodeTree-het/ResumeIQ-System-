@@ -8,26 +8,17 @@ requires-python = ">=3.12,<3.13"
 dependencies = [
     "fastapi>=0.141.1",
     "uvicorn>=0.52.0",
-    "starlette",
-    "pydantic",
     "pymongo>=4.18.0",
     "PyJWT>=2.13.0",
     "bcrypt>=5.0.0",
     "python-multipart",
     "email-validator",
-    "anyio",
-
+    "python-dotenv",
     "pymupdf>=1.28.2",
     "python-docx>=1.2.0",
-    "lxml>=6.1.3",
-
-    "spacy",
-    "scikit-learn",
-    "pandas",
-    "numpy",
     "joblib",
-
-    "python-dotenv"
+    "scikit-learn",
+    "numpy"
 ]
 
 [tool.vercel]
